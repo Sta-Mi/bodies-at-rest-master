@@ -1,3 +1,5 @@
+import os
+import pickle
 from pathlib import Path
 
 import numpy as np
@@ -6,112 +8,112 @@ from torch.utils.data import Dataset
 
 
 BASE_PATH = Path(__file__).resolve().parents[1]
-DATA_PATH = BASE_PATH / "data_BP" / "slp_real_cleaned"
-SPLIT_PATH = BASE_PATH / "BodyMAP" / "data_files"
+DEFAULT_DATA_ROOT = Path(
+    os.environ.get("BODIES_AT_REST_DATA", BASE_PATH / "data_BR")
+)
+MAT_SHAPE = (64, 27)
 
 
-MODES = {
-    "pressure": "pressure_recon_Pplus_gt_0to102.npy",
-    "depth_cover1": "depth_cover1_cleaned_0to102.npy",
-    "depth_cover2": "depth_cover2_cleaned_0to102.npy",
-    "depth_uncover": "depth_uncover_cleaned_0to102.npy",
-}
-
-
-def load_subject_ids(split_file: str, limit_subjects: int | None = None):
-    split_path = SPLIT_PATH / split_file
-    lines = [
-        line.strip()
-        for line in split_path.read_text().splitlines()
-        if line.strip()
-    ]
-    if limit_subjects is not None:
-        lines = lines[:limit_subjects]
-    return lines
-
-
-def resolve_pose_range(
-    total_poses: int,
-    pose_start: int | None = None,
-    pose_end: int | None = None,
-    limit_poses: int | None = None,
-):
-    start = 0 if pose_start is None else pose_start
-    end = total_poses if pose_end is None else pose_end
-    if limit_poses is not None:
-        end = min(end, start + limit_poses)
-    if start < 0 or end < start or end > total_poses:
-        raise ValueError(
-            f"Invalid pose range [{start}, {end}) for {total_poses} poses. "
-            "Use 0-based --*_pose_start/--*_pose_end values."
+def discover_subject_ids(data_root: str | Path = DEFAULT_DATA_ROOT):
+    """Return subjects that contain at least one real pressure recording."""
+    real_root = Path(data_root).expanduser().resolve() / "real"
+    if not real_root.is_dir():
+        raise FileNotFoundError(
+            f"Real dataset not found at {real_root}. Pass --data_root or set "
+            "BODIES_AT_REST_DATA to the data_BR directory."
         )
-    return range(start, end)
+    subjects = [
+        path.name
+        for path in real_root.iterdir()
+        if path.is_dir() and any(path.glob("*.p"))
+    ]
+    if not subjects:
+        raise FileNotFoundError(f"No subject recordings (*.p) found below {real_root}")
+    return sorted(subjects)
+
+
+def load_pickle(path: Path):
+    with path.open("rb") as stream:
+        return pickle.load(stream, encoding="latin1")
+
+
+def pressure_image(image):
+    image = np.asarray(image, dtype=np.float32)
+    if image.shape == (84, 47) or image.size == 84 * 47:
+        image = image.reshape(84, 47)[10:74, 10:37]
+    elif image.shape != MAT_SHAPE:
+        if image.size != MAT_SHAPE[0] * MAT_SHAPE[1]:
+            raise ValueError(
+                f"Expected a {MAT_SHAPE} (or 84x47) pressure map, got {image.shape}"
+            )
+        image = image.reshape(MAT_SHAPE)
+    return np.ascontiguousarray(np.clip(image, 0.0, 100.0) / 100.0)
 
 
 class IdentityDataset(Dataset):
+    """PressurePose real-data identity dataset.
+
+    A recording file is treated as a session.  This makes it possible to train on
+    ``prescribed.p`` and test on the independently collected ``p_select.p`` rather
+    than leaking near-duplicate frames through a random frame split.
+    """
+
     def __init__(
         self,
-        split_file: str,
-        mode: str = "pressure",
-        limit_subjects: int | None = None,
-        limit_poses: int | None = None,
+        data_root: str | Path = DEFAULT_DATA_ROOT,
+        sessions: tuple[str, ...] | list[str] = ("prescribed",),
         subject_ids: list[str] | None = None,
         label_to_idx: dict[str, int] | None = None,
-        pose_start: int | None = None,
-        pose_end: int | None = None,
-        pose_indices: list[int] | None = None,
+        limit_subjects: int | None = None,
+        limit_samples_per_session: int | None = None,
     ):
-        if mode not in MODES:
-            raise ValueError(f"Unknown mode {mode}, choose from {list(MODES)}")
-
-        self.mode = mode
-        self.subject_ids = subject_ids or load_subject_ids(split_file, limit_subjects)
-        self.label_to_idx = label_to_idx or {
-            sid: i for i, sid in enumerate(self.subject_ids)
-        }
-        self.idx_to_label = {i: sid for sid, i in self.label_to_idx.items()}
+        self.data_root = Path(data_root).expanduser().resolve()
+        discovered = discover_subject_ids(self.data_root)
+        if subject_ids is None:
+            subject_ids = discovered
+        if limit_subjects is not None:
+            subject_ids = subject_ids[:limit_subjects]
+        self.subject_ids = list(subject_ids)
+        self.label_to_idx = (
+            dict(label_to_idx)
+            if label_to_idx is not None
+            else {sid: index for index, sid in enumerate(self.subject_ids)}
+        )
+        self.idx_to_label = {index: sid for sid, index in self.label_to_idx.items()}
         self.num_classes = len(self.label_to_idx)
-
-        array_path = DATA_PATH / MODES[mode]
-        self.data = np.load(array_path, mmap_mode="r")
-        if pose_indices is None:
-            pose_indices = list(
-                resolve_pose_range(
-                    self.data.shape[1],
-                    pose_start=pose_start,
-                    pose_end=pose_end,
-                    limit_poses=limit_poses,
-                )
-            )
-        else:
-            if pose_start is not None or pose_end is not None or limit_poses is not None:
-                raise ValueError("pose_indices cannot be combined with pose ranges or limit_poses")
-            if not pose_indices or min(pose_indices) < 0 or max(pose_indices) >= self.data.shape[1]:
-                raise ValueError(
-                    f"Invalid pose_indices for {self.data.shape[1]} poses: {pose_indices}"
-                )
-
+        self.sessions = tuple(session.removesuffix(".p") for session in sessions)
         self.samples = []
+
         for subject_id in self.subject_ids:
             if subject_id not in self.label_to_idx:
                 continue
-            person_idx = int(subject_id) - 1
-            label_idx = self.label_to_idx[subject_id]
-            for pose_idx in pose_indices:
-                self.samples.append((person_idx, pose_idx, label_idx, subject_id))
+            for session in self.sessions:
+                path = self.data_root / "real" / subject_id / f"{session}.p"
+                if not path.is_file():
+                    raise FileNotFoundError(f"Missing recording: {path}")
+                recording = load_pickle(path)
+                if "images" not in recording:
+                    raise KeyError(f"{path} does not contain an 'images' field")
+                images = recording["images"]
+                count = len(images)
+                if limit_samples_per_session is not None:
+                    count = min(count, limit_samples_per_session)
+                for image_index in range(count):
+                    self.samples.append(
+                        (path, image_index, self.label_to_idx[subject_id], subject_id)
+                    )
+
+        if not self.samples:
+            raise ValueError("The selected subjects/sessions contain no pressure images")
+        # Loading each pickle once is substantially faster than reopening it per item.
+        self._recordings = {
+            path: load_pickle(path)["images"] for path in {sample[0] for sample in self.samples}
+        }
 
     def __len__(self):
         return len(self.samples)
 
     def __getitem__(self, index):
-        person_idx, pose_idx, label_idx, subject_id = self.samples[index]
-        image = self.data[person_idx, pose_idx].astype(np.float32)
-
-        if self.mode == "pressure":
-            image = np.clip(image, 0.0, 100.0) / 100.0
-        else:
-            image = np.clip(image, 0.0, 102.0) / 102.0
-
-        image = np.expand_dims(image, axis=0)
-        image = np.ascontiguousarray(image)
-        return torch.from_numpy(image), label_idx
+        path, image_index, label_idx, _ = self.samples[index]
+        image = pressure_image(self._recordings[path][image_index])
+        return torch.from_numpy(image[None]), label_idx

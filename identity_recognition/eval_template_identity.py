@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from dataset import IdentityDataset, load_subject_ids
+from dataset import DEFAULT_DATA_ROOT, IdentityDataset, discover_subject_ids
 from eval_verification import binary_verification_metrics
 from models import build_model
 
@@ -16,8 +16,7 @@ from models import build_model
 def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate enrollment-template identity matching.")
     parser.add_argument("--checkpoint", required=True)
-    parser.add_argument("--split", default="real_all.txt")
-    parser.add_argument("--mode", default="pressure")
+    parser.add_argument("--data_root", type=Path, default=DEFAULT_DATA_ROOT)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--out_dir", required=True, type=Path)
@@ -45,23 +44,22 @@ def main():
         raise ValueError("Template evaluation requires a pressure_arcface checkpoint")
 
     config = ckpt.get("config", {})
-    train_poses = config.get("train_pose_indices")
-    val_poses = config.get("val_pose_indices")
-    if not train_poses or not val_poses:
-        raise ValueError("Checkpoint must contain disjoint train_pose_indices and val_pose_indices")
-    if set(train_poses) & set(val_poses):
-        raise ValueError("Enrollment and probe pose indices overlap")
+    train_sessions = config.get("train_sessions")
+    val_sessions = config.get("val_sessions")
+    if not train_sessions or not val_sessions:
+        raise ValueError("Checkpoint must record enrollment and probe sessions")
+    if set(train_sessions) & set(val_sessions):
+        raise ValueError("Enrollment and probe sessions overlap")
 
     label_to_idx = ckpt["label_to_idx"]
-    subject_ids = [sid for sid in load_subject_ids(args.split) if sid in label_to_idx]
+    subject_ids = [sid for sid in discover_subject_ids(args.data_root) if sid in label_to_idx]
     common = dict(
-        split_file=args.split,
-        mode=args.mode,
+        data_root=args.data_root,
         subject_ids=subject_ids,
         label_to_idx=label_to_idx,
     )
-    enrollment = IdentityDataset(**common, pose_indices=train_poses)
-    probes = IdentityDataset(**common, pose_indices=val_poses)
+    enrollment = IdentityDataset(**common, sessions=train_sessions)
+    probes = IdentityDataset(**common, sessions=val_sessions)
     enrollment_loader = DataLoader(enrollment, batch_size=args.batch_size, shuffle=False)
     probe_loader = DataLoader(probes, batch_size=args.batch_size, shuffle=False)
 
@@ -97,8 +95,8 @@ def main():
             "acc_subject": subject_correct / len(torch.unique(probe_labels)),
             "num_enrollment_embeddings": len(enrollment_embeddings),
             "num_probe_embeddings": len(probe_embeddings),
-            "train_pose_indices": train_poses,
-            "val_pose_indices": val_poses,
+            "enrollment_sessions": train_sessions,
+            "probe_sessions": val_sessions,
         }
     )
     args.out_dir.mkdir(parents=True, exist_ok=True)
