@@ -1,0 +1,18 @@
+results_synth_test_rollpi_m_lay_set23to24_3000*.p files 3
+   results_synth_test_rollpi_m_lay_set23to24_3000.p n= 1500 mpjpe_cm= 13.699 v2v_cm= 16.043 3dvpe_cm= 4.604
+   results_synth_test_rollpi_m_lay_set23to24_3000_slice0_1500.p n= 1500 mpjpe_cm= 13.699 v2v_cm= 16.043 3dvpe_cm= 4.604
+   results_synth_test_rollpi_m_lay_set23to24_3000_slice1500_3000.p n= 1500 mpjpe_cm= 13.759 v2v_cm= 16.173 3dvpe_cm= 4.617
+results_synth_test_rollpi_plo_m_lay_set23to24_3000*.p files 2
+   results_synth_test_rollpi_plo_m_lay_set23to24_3000_slice0_1500.p n= 1500 mpjpe_cm= 12.542 v2v_cm= 14.843 3dvpe_cm= 4.595
+   results_synth_test_rollpi_plo_m_lay_set23to24_3000_slice1500_3000.p n= 1500 mpjpe_cm= 12.508 v2v_cm= 14.873 3dvpe_cm= 4.561
+results_synth_test_rollpi_f_lay_set23to24_3000*.p files 3
+   results_synth_test_rollpi_f_lay_set23to24_3000.p n= 1500 mpjpe_cm= 12.668 v2v_cm= 14.775 3dvpe_cm= 4.424
+   results_synth_test_rollpi_f_lay_set23to24_3000_slice0_1500.p n= 1500 mpjpe_cm= 12.668 v2v_cm= 14.775 3dvpe_cm= 4.424
+   results_synth_test_rollpi_f_lay_set23to24_3000_slice1500_3000.p n= 1500 mpjpe_cm= 12.582 v2v_cm= 14.665 3dvpe_cm= 4.401
+results_synth_test_rollpi_plo_f_lay_set23to24_3000*.p files 2
+   results_synth_test_rollpi_plo_f_lay_set23to24_3000_slice0_1500.p n= 1500 mpjpe_cm= 11.691 v2v_cm= 13.781 3dvpe_cm= 4.34
+   results_synth_test_rollpi_plo_f_lay_set23to24_3000_slice1500_3000.p n= 1500 mpjpe_cm= 11.671 v2v_cm= 13.78 3dvpe_cm= 4.307
+TOTAL_SAMPLES 15000
+12K_synth_MPJPE_cm 12.7488
+12K_synth_v2v_cm 14.975
+12K_synth_3DVPE_cm 4.4878

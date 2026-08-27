@@ -1,0 +1,3473 @@
+######################### CUDA is available! #############################
+height_in 68.0
+gender f
+weight_lbs 186.0
+prescribed_pose_type ['rollpi', 'rollpi_plo', 'sl', 'phu', 'sl', 'hbh', 'rollpi_plo', 'rollpi', 'sl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi_plo', 'phu', 'supine_plo', 'sl', 'rollpi', 'phu', 'rollpi_plo', 'rollpi', 'hbh', 'phu', 'xl', 'supine_plo', 'hbh', 'rollpi_plo', 'supine', 'rollpi', 'supine', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'xl', 'rollpi', 'rollpi', 'rollpi', 'xl', 'supine_plo', 'xl', 'rollpi', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S103
+height_in 68.0
+gender f
+weight_lbs 186.0
+prescribed_pose_type ['rollpi', 'rollpi_plo', 'sl', 'phu', 'sl', 'hbh', 'rollpi_plo', 'rollpi', 'sl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi_plo', 'phu', 'supine_plo', 'sl', 'rollpi', 'phu', 'rollpi_plo', 'rollpi', 'hbh', 'phu', 'xl', 'supine_plo', 'hbh', 'rollpi_plo', 'supine', 'rollpi', 'supine', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'xl', 'rollpi', 'rollpi', 'rollpi', 'xl', 'supine_plo', 'xl', 'rollpi', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'convnet_br.CNN' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.conv.Conv2d' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.activation.ReLU' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.pooling.MaxPool2d' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.activation.Tanh' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/shnh/DATA/zjy/conda_envs/BodyPressure/lib/python3.10/site-packages/torch/serialization.py:1469: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+/home/zjy/bodies-at-rest-master/PressureNet/../lib_py/unpack_batch_lib_br.py:126: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  images_up = Variable(torch.Tensor(images_up_non_tensor).type(CTRL_PNL['dtype']), requires_grad=False)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+/home/zjy/bodies-at-rest-master/PressureNet/../lib_py/mesh_depth_lib_br.py:406: UserWarning: This overload of sub is deprecated:
+	sub(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	sub(Tensor other, *, Number alpha = 1) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1642.)
+  pose_feature = (Rs_est[start_incr:end_incr, 1:, :, :]).sub(1.0, torch.eye(3).type(self.dtype)).view(-1, 207)
+max:  100.0 max:  184.58116 max:  138.32072   sum:  356536.38   sum:  81760.47   sum:  81676.55 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  184.77953 max:  100.0 max:  184.58116 max:  138.32072   sum:  356536.38   sum:  0.0   sum:  251705.25   sum:  371323.62   sum:  81760.47   sum:  81676.55 
+0.027498435 1.7326826
+-0.19950049 0.8788978
+-0.22386004 0.20480631
+got here
+average vert to nearest pc point error: 0.0313608742081258
+average vert of  l_lowerleg  to nearest pc point error: 0.040166713280139134
+average vert of  r_lowerleg  to nearest pc point error: 0.04245683677731382
+average vert of  l_upperleg  to nearest pc point error: 0.0317459818868064
+average vert of  r_upperleg  to nearest pc point error: 0.03225818187176005
+average vert of  l_forearm  to nearest pc point error: 0.042211604241466485
+average vert of  r_forearm  to nearest pc point error: 0.03976960623240162
+average vert of  l_upperarm  to nearest pc point error: 0.02327404794374067
+average vert of  r_upperarm  to nearest pc point error: 0.03404131563100114
+average vert of  head  to nearest pc point error: 0.03506048646233324
+average vert of  torso  to nearest pc point error: 0.02300313314617892
+average pc point to nearest vert error: 0.042394585572060856
+adding to mesh 0
+adding to gt 28
+Precision is: 0.8643958868894601
+Recall is: 0.7375925418151905
+Average error from overlapping: 0.03924512081784387
+Average error: 0.11005621774391743
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  135.83534 max:  128.04752   sum:  367318.72   sum:  82111.17   sum:  82015.016 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  185.18971 max:  100.0 max:  135.83534 max:  128.04752   sum:  367318.72   sum:  0.0   sum:  293193.7   sum:  406237.88   sum:  82111.17   sum:  82015.016 
+0.16531803 1.832671
+-0.010012347 0.88613486
+-0.16183978 0.20164941
+got here
+average vert to nearest pc point error: 0.033356716105571664
+average vert of  l_lowerleg  to nearest pc point error: 0.04871908153191084
+average vert of  r_lowerleg  to nearest pc point error: 0.021428680028546553
+average vert of  l_upperleg  to nearest pc point error: 0.032999026614355664
+average vert of  r_upperleg  to nearest pc point error: 0.03120974454083268
+average vert of  l_forearm  to nearest pc point error: 0.07421267292282346
+average vert of  r_forearm  to nearest pc point error: 0.03315878358962507
+average vert of  l_upperarm  to nearest pc point error: 0.04731491510176341
+average vert of  r_upperarm  to nearest pc point error: 0.04209995970277041
+average vert of  head  to nearest pc point error: 0.037015778016612925
+average vert of  torso  to nearest pc point error: 0.025905324967149663
+average pc point to nearest vert error: 0.04111406364305312
+adding to mesh 0
+adding to gt 28
+Precision is: 0.8516483516483516
+Recall is: 0.7242990654205608
+Average error from overlapping: 0.03822936432637571
+Average error: 0.11114123138882108
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  232.38255 max:  197.75864   sum:  294922.94   sum:  82151.234   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  208.94116 max:  100.0 max:  232.38255 max:  197.75864   sum:  294922.94   sum:  0.0   sum:  247614.1   sum:  317719.94   sum:  82151.234   sum:  82151.234 
+0.23203124 1.772009
+-0.18206508 0.6166841
+-0.23497677 0.2086055
+got here
+average vert to nearest pc point error: 0.05623668474559385
+average vert of  l_lowerleg  to nearest pc point error: 0.05229803425307049
+average vert of  r_lowerleg  to nearest pc point error: 0.09398531439732512
+average vert of  l_upperleg  to nearest pc point error: 0.04760900649344171
+average vert of  r_upperleg  to nearest pc point error: 0.06439826666965515
+average vert of  l_forearm  to nearest pc point error: 0.056628959322924596
+average vert of  r_forearm  to nearest pc point error: 0.056601491724271175
+average vert of  l_upperarm  to nearest pc point error: 0.017838025020356744
+average vert of  r_upperarm  to nearest pc point error: 0.11684392215869611
+average vert of  head  to nearest pc point error: 0.03928884142049084
+average vert of  torso  to nearest pc point error: 0.04708335119276629
+average pc point to nearest vert error: 0.05949410558825255
+adding to mesh 0
+adding to gt 30
+Precision is: 0.7394337299958966
+Recall is: 0.8146473779385172
+Average error from overlapping: 0.09275943396226416
+Average error: 0.15627217246224095
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  251.18188 max:  201.48163   sum:  315666.12   sum:  82149.05   sum:  82121.72 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  229.94667 max:  100.0 max:  251.18188 max:  201.48163   sum:  315666.12   sum:  0.0   sum:  237721.05   sum:  300057.4   sum:  82149.05   sum:  82121.72 
+0.14058794 1.7914742
+0.058756333 0.8675518
+-0.23060742 0.20071837
+got here
+average vert to nearest pc point error: 0.053342968053680336
+average vert of  l_lowerleg  to nearest pc point error: 0.05227435349353798
+average vert of  r_lowerleg  to nearest pc point error: 0.07157817171586278
+average vert of  l_upperleg  to nearest pc point error: 0.06224332585308012
+average vert of  r_upperleg  to nearest pc point error: 0.03281488045635774
+average vert of  l_forearm  to nearest pc point error: 0.11908166744432122
+average vert of  r_forearm  to nearest pc point error: 0.04322258132667748
+average vert of  l_upperarm  to nearest pc point error: 0.07135351502017302
+average vert of  r_upperarm  to nearest pc point error: 0.024323876241618275
+average vert of  head  to nearest pc point error: 0.04350311241153295
+average vert of  torso  to nearest pc point error: 0.05129291215897563
+average pc point to nearest vert error: 0.04742810714964721
+adding to mesh 0
+adding to gt 25
+Precision is: 0.7380191693290735
+Recall is: 0.7365484256675967
+Average error from overlapping: 0.06623985389610389
+Average error: 0.14780963665086888
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  124.96514 max:  92.5444   sum:  362595.03   sum:  81808.11   sum:  81819.875 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  210.91042 max:  100.0 max:  124.96514 max:  92.5444   sum:  362595.03   sum:  0.0   sum:  283732.9   sum:  393709.8   sum:  81808.11   sum:  81819.875 
+0.123683766 1.877169
+0.117062196 0.8701041
+-0.18434736 0.42603594
+got here
+average vert to nearest pc point error: 0.046230301388765827
+average vert of  l_lowerleg  to nearest pc point error: 0.03515200039541241
+average vert of  r_lowerleg  to nearest pc point error: 0.019899425184917267
+average vert of  l_upperleg  to nearest pc point error: 0.04181135689036795
+average vert of  r_upperleg  to nearest pc point error: 0.018073101338918398
+average vert of  l_forearm  to nearest pc point error: 0.29151994812460114
+average vert of  r_forearm  to nearest pc point error: 0.06291096874821878
+average vert of  l_upperarm  to nearest pc point error: 0.10287017999148527
+average vert of  r_upperarm  to nearest pc point error: 0.0925259196525445
+average vert of  head  to nearest pc point error: 0.01727079146223021
+average vert of  torso  to nearest pc point error: 0.022418325998067146
+average pc point to nearest vert error: 0.040823372611364636
+adding to mesh 0
+adding to gt 74
+Precision is: 0.9212678936605317
+Recall is: 0.7618376550169109
+Average error from overlapping: 0.046078893821679616
+Average error: 0.1606820587456999
+height_in 60.0
+gender f
+weight_lbs 93.0
+prescribed_pose_type ['rollpi_plo', 'sl', 'phu', 'rollpi_plo', 'hbh', 'sl', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'hbh', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'rollpi', 'rollpi', 'phu', 'phu', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'xl', 'phu', 'hbh', 'rollpi_plo', 'sl', 'sl', 'supine_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'hbh', 'supine_plo', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo', 'xl', 'rollpi', 'supine', 'rollpi', 'xl', 'rollpi_plo', 'supine', 'supine', 'rollpi', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S104
+height_in 60.0
+gender f
+weight_lbs 93.0
+prescribed_pose_type ['rollpi_plo', 'sl', 'phu', 'rollpi_plo', 'hbh', 'sl', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'hbh', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'rollpi', 'rollpi', 'phu', 'phu', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'xl', 'phu', 'hbh', 'rollpi_plo', 'sl', 'sl', 'supine_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'hbh', 'supine_plo', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo', 'xl', 'rollpi', 'supine', 'rollpi', 'xl', 'rollpi_plo', 'supine', 'supine', 'rollpi', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  549.35425 max:  267.53622   sum:  226840.12   sum:  82131.234   sum:  81976.89 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  159.0217 max:  100.0 max:  549.35425 max:  267.53622   sum:  226840.12   sum:  0.0   sum:  121180.266   sum:  227456.25   sum:  82131.234   sum:  81976.89 
+0.2534362 1.7891043
+0.04396097 0.7811997
+-0.27043366 0.15084371
+got here
+average vert to nearest pc point error: 0.06216133611068919
+average vert of  l_lowerleg  to nearest pc point error: 0.04820755864649619
+average vert of  r_lowerleg  to nearest pc point error: 0.07430208522025553
+average vert of  l_upperleg  to nearest pc point error: 0.0442363629767826
+average vert of  r_upperleg  to nearest pc point error: 0.05842235974282411
+average vert of  l_forearm  to nearest pc point error: 0.13138094466404351
+average vert of  r_forearm  to nearest pc point error: 0.17252754234099618
+average vert of  l_upperarm  to nearest pc point error: 0.048397137195782584
+average vert of  r_upperarm  to nearest pc point error: 0.03340082899885901
+average vert of  head  to nearest pc point error: 0.03266815404270719
+average vert of  torso  to nearest pc point error: 0.045525060775086376
+average pc point to nearest vert error: 0.05103029165727165
+adding to mesh 0
+adding to gt 19
+Precision is: 0.7120921305182342
+Recall is: 0.6237915090374107
+Average error from overlapping: 0.06289799528301887
+Average error: 0.14368936723732798
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  474.4499 max:  237.56061   sum:  230228.84   sum:  82151.2   sum:  82138.33 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  167.77165 max:  100.0 max:  474.4499 max:  237.56061   sum:  230228.84   sum:  0.0   sum:  145631.56   sum:  242756.92   sum:  82151.2   sum:  82138.33 
+0.22871019 1.7926182
+0.14831628 0.76454353
+-0.36498964 0.15400144
+got here
+average vert to nearest pc point error: 0.0589109239624866
+average vert of  l_lowerleg  to nearest pc point error: 0.056665396808162925
+average vert of  r_lowerleg  to nearest pc point error: 0.07086936951519571
+average vert of  l_upperleg  to nearest pc point error: 0.05454910554539394
+average vert of  r_upperleg  to nearest pc point error: 0.0630574438550679
+average vert of  l_forearm  to nearest pc point error: 0.18280463738727812
+average vert of  r_forearm  to nearest pc point error: 0.026488506124069666
+average vert of  l_upperarm  to nearest pc point error: 0.030474810764111068
+average vert of  r_upperarm  to nearest pc point error: 0.060116074860436894
+average vert of  head  to nearest pc point error: 0.032578538839341864
+average vert of  torso  to nearest pc point error: 0.04337021760871023
+average pc point to nearest vert error: 0.047697344527089645
+adding to mesh 0
+adding to gt 20
+Precision is: 0.8064228367528992
+Recall is: 0.7045985970381917
+Average error from overlapping: 0.06993501106194691
+Average error: 0.12600666666666666
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  592.4405 max:  289.86337   sum:  180732.72   sum:  82151.25   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  341.0477 max:  100.0 max:  592.4405 max:  289.86337   sum:  180732.72   sum:  0.0   sum:  234545.9   sum:  262062.45   sum:  82151.25   sum:  82151.234 
+0.29215175 1.7361792
+0.07059072 0.7669989
+-0.26470378 0.28961858
+got here
+average vert to nearest pc point error: 0.051314846705246074
+average vert of  l_lowerleg  to nearest pc point error: 0.05467815468426109
+average vert of  r_lowerleg  to nearest pc point error: 0.027779219565567986
+average vert of  l_upperleg  to nearest pc point error: 0.026776101608153736
+average vert of  r_upperleg  to nearest pc point error: 0.03303704081701685
+average vert of  l_forearm  to nearest pc point error: 0.05537560150259128
+average vert of  r_forearm  to nearest pc point error: 0.14565189863154057
+average vert of  l_upperarm  to nearest pc point error: 0.046229099305311744
+average vert of  r_upperarm  to nearest pc point error: 0.1932222916518591
+average vert of  head  to nearest pc point error: 0.05067682397285816
+average vert of  torso  to nearest pc point error: 0.04107067451436599
+average pc point to nearest vert error: 0.04072514854726647
+adding to mesh 0
+adding to gt 47
+Precision is: 0.7185750636132315
+Recall is: 0.7241025641025641
+Average error from overlapping: 0.06174220963172805
+Average error: 0.1780323611666001
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  697.00507 max:  367.74387   sum:  182786.52   sum:  82150.69   sum:  82146.72 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  316.58344 max:  100.0 max:  697.00507 max:  367.74387   sum:  182786.52   sum:  0.0   sum:  191567.45   sum:  236390.19   sum:  82150.69   sum:  82146.72 
+0.3668344 1.7871991
+0.15091033 0.9268458
+-0.24051669 0.24163394
+got here
+average vert to nearest pc point error: 0.05008402828173255
+average vert of  l_lowerleg  to nearest pc point error: 0.036311136536355974
+average vert of  r_lowerleg  to nearest pc point error: 0.08473571911977222
+average vert of  l_upperleg  to nearest pc point error: 0.029056976798784037
+average vert of  r_upperleg  to nearest pc point error: 0.044636574943701685
+average vert of  l_forearm  to nearest pc point error: 0.1462890754423702
+average vert of  r_forearm  to nearest pc point error: 0.051371931155134117
+average vert of  l_upperarm  to nearest pc point error: 0.12711328448651646
+average vert of  r_upperarm  to nearest pc point error: 0.030776302119661487
+average vert of  head  to nearest pc point error: 0.025449216219555808
+average vert of  torso  to nearest pc point error: 0.04385827305279059
+average pc point to nearest vert error: 0.04636640630787978
+adding to mesh 0
+adding to gt 35
+Precision is: 0.7473684210526316
+Recall is: 0.6542192046556741
+Average error from overlapping: 0.06565094514455153
+Average error: 0.1766034551231136
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  624.45917 max:  271.61066   sum:  232488.0   sum:  82151.24   sum:  82151.24 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  268.28732 max:  100.0 max:  624.45917 max:  271.61066   sum:  232488.0   sum:  0.0   sum:  197762.69   sum:  302830.0   sum:  82151.24   sum:  82151.24 
+0.13260828 1.7002654
+0.20846708 0.778937
+-0.21538198 0.24737117
+got here
+average vert to nearest pc point error: 0.046490736027066576
+average vert of  l_lowerleg  to nearest pc point error: 0.03665947829133846
+average vert of  r_lowerleg  to nearest pc point error: 0.045643300869498825
+average vert of  l_upperleg  to nearest pc point error: 0.02482033884756142
+average vert of  r_upperleg  to nearest pc point error: 0.02125652628439319
+average vert of  l_forearm  to nearest pc point error: 0.1589152603786096
+average vert of  r_forearm  to nearest pc point error: 0.12311811138413624
+average vert of  l_upperarm  to nearest pc point error: 0.09620516293235581
+average vert of  r_upperarm  to nearest pc point error: 0.10083118168373884
+average vert of  head  to nearest pc point error: 0.041470441904805866
+average vert of  torso  to nearest pc point error: 0.019171117143252776
+average pc point to nearest vert error: 0.044718766664694154
+adding to mesh 0
+adding to gt 39
+Precision is: 0.8142644873699851
+Recall is: 0.6531585220500596
+Average error from overlapping: 0.05322612530413625
+Average error: 0.15322678941908716
+height_in 66.0
+gender f
+weight_lbs 164.0
+prescribed_pose_type ['rollpi', 'rollpi_plo', 'rollpi', 'phu', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'xl', 'sl', 'sl', 'rollpi', 'sl', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'xl', 'hbh', 'rollpi', 'xl', 'xl', 'supine', 'rollpi_plo', 'sl', 'phu', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi_plo', 'phu', 'rollpi', 'supine', 'rollpi', 'rollpi', 'supine_plo', 'rollpi', 'phu', 'hbh', 'hbh', 'supine_plo', 'hbh', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S107
+height_in 66.0
+gender f
+weight_lbs 164.0
+prescribed_pose_type ['rollpi', 'rollpi_plo', 'rollpi', 'phu', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'xl', 'sl', 'sl', 'rollpi', 'sl', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'xl', 'hbh', 'rollpi', 'xl', 'xl', 'supine', 'rollpi_plo', 'sl', 'phu', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi_plo', 'phu', 'rollpi', 'supine', 'rollpi', 'rollpi', 'supine_plo', 'rollpi', 'phu', 'hbh', 'hbh', 'supine_plo', 'hbh', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  178.03003 max:  126.722305   sum:  349450.84   sum:  81547.195   sum:  81398.29 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  169.33368 max:  100.0 max:  178.03003 max:  126.722305   sum:  349450.84   sum:  0.0   sum:  220335.78   sum:  341133.03   sum:  81547.195   sum:  81398.29 
+0.28003728 1.9338588
+-0.01391365 0.8372923
+-0.17421128 0.16120084
+got here
+average vert to nearest pc point error: 0.03149030647707247
+average vert of  l_lowerleg  to nearest pc point error: 0.030190576635864916
+average vert of  r_lowerleg  to nearest pc point error: 0.03237098110259289
+average vert of  l_upperleg  to nearest pc point error: 0.02336008467685359
+average vert of  r_upperleg  to nearest pc point error: 0.03085916439287082
+average vert of  l_forearm  to nearest pc point error: 0.03678062032177139
+average vert of  r_forearm  to nearest pc point error: 0.04151267696739039
+average vert of  l_upperarm  to nearest pc point error: 0.024656597120820245
+average vert of  r_upperarm  to nearest pc point error: 0.050707530992816975
+average vert of  head  to nearest pc point error: 0.03461591550663162
+average vert of  torso  to nearest pc point error: 0.0301497697745165
+average pc point to nearest vert error: 0.04018704428955803
+adding to mesh 0
+adding to gt 22
+Precision is: 0.8655432054499821
+Recall is: 0.7048175182481752
+Average error from overlapping: 0.042213131731565864
+Average error: 0.09897615131578948
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  175.76926 max:  156.28555   sum:  348423.94   sum:  81564.32   sum:  81285.38 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  160.52919 max:  100.0 max:  175.76926 max:  156.28555   sum:  348423.94   sum:  0.0   sum:  207908.36   sum:  339592.7   sum:  81564.32   sum:  81285.38 
+0.26994097 1.9132377
+-0.082754046 0.8869599
+-0.21320501 0.16867176
+got here
+average vert to nearest pc point error: 0.030893007190255454
+average vert of  l_lowerleg  to nearest pc point error: 0.020824918263400643
+average vert of  r_lowerleg  to nearest pc point error: 0.02284694425685358
+average vert of  l_upperleg  to nearest pc point error: 0.021135379976410313
+average vert of  r_upperleg  to nearest pc point error: 0.03710284286622836
+average vert of  l_forearm  to nearest pc point error: 0.05054560345121125
+average vert of  r_forearm  to nearest pc point error: 0.07862202388490636
+average vert of  l_upperarm  to nearest pc point error: 0.04777642843538428
+average vert of  r_upperarm  to nearest pc point error: 0.03827433994322157
+average vert of  head  to nearest pc point error: 0.03119193756445752
+average vert of  torso  to nearest pc point error: 0.027044540134678757
+average pc point to nearest vert error: 0.03993135881164118
+adding to mesh 0
+adding to gt 24
+Precision is: 0.9190298507462686
+Recall is: 0.711027713625866
+Average error from overlapping: 0.03828714981729598
+Average error: 0.09433526894865527
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  315.11383 max:  190.159   sum:  266272.72   sum:  82149.484   sum:  82110.125 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  202.67181 max:  100.0 max:  315.11383 max:  190.159   sum:  266272.72   sum:  0.0   sum:  151565.95   sum:  256106.5   sum:  82149.484   sum:  82110.125 
+0.18543844 1.8997875
+0.13657464 0.71605843
+-0.21253705 0.21503708
+got here
+average vert to nearest pc point error: 0.06398951047928765
+average vert of  l_lowerleg  to nearest pc point error: 0.13897068145322355
+average vert of  r_lowerleg  to nearest pc point error: 0.03555927962823002
+average vert of  l_upperleg  to nearest pc point error: 0.052590308478679265
+average vert of  r_upperleg  to nearest pc point error: 0.061090257690044746
+average vert of  l_forearm  to nearest pc point error: 0.039901545766770526
+average vert of  r_forearm  to nearest pc point error: 0.07875495876308584
+average vert of  l_upperarm  to nearest pc point error: 0.0278726829339033
+average vert of  r_upperarm  to nearest pc point error: 0.16883317846815962
+average vert of  head  to nearest pc point error: 0.03710687953326385
+average vert of  torso  to nearest pc point error: 0.05431747723200138
+average pc point to nearest vert error: 0.05975624990343506
+adding to mesh 0
+adding to gt 27
+Precision is: 0.6732151413512218
+Recall is: 0.6767822736030829
+Average error from overlapping: 0.07973265124555161
+Average error: 0.18681608049311094
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  242.58699 max:  188.40091   sum:  280546.5   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  196.34021 max:  100.0 max:  242.58699 max:  188.40091   sum:  280546.5   sum:  0.0   sum:  163384.44   sum:  240703.12   sum:  82151.24   sum:  82151.234 
+0.19333579 1.8249065
+0.14989845 0.96454036
+-0.2200546 0.20872653
+got here
+average vert to nearest pc point error: 0.054413061115645436
+average vert of  l_lowerleg  to nearest pc point error: 0.034260620403745806
+average vert of  r_lowerleg  to nearest pc point error: 0.127521236386216
+average vert of  l_upperleg  to nearest pc point error: 0.049387118966393154
+average vert of  r_upperleg  to nearest pc point error: 0.04170415737966513
+average vert of  l_forearm  to nearest pc point error: 0.13302300447492418
+average vert of  r_forearm  to nearest pc point error: 0.055594211157657655
+average vert of  l_upperarm  to nearest pc point error: 0.11115143750895524
+average vert of  r_upperarm  to nearest pc point error: 0.03007605360616755
+average vert of  head  to nearest pc point error: 0.03440511478411062
+average vert of  torso  to nearest pc point error: 0.038177496140299895
+average pc point to nearest vert error: 0.043971210378172566
+adding to mesh 0
+adding to gt 27
+Precision is: 0.7145299145299145
+Recall is: 0.7333333333333333
+Average error from overlapping: 0.06684958133971293
+Average error: 0.15662271031207597
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  158.08908 max:  113.46224   sum:  291123.47   sum:  81860.78   sum:  81131.25 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  274.14783 max:  100.0 max:  158.08908 max:  113.46224   sum:  291123.47   sum:  0.0   sum:  262665.25   sum:  329837.25   sum:  81860.78   sum:  81131.25 
+0.28232723 1.9263676
+-0.1508771 0.8958404
+-0.19184022 0.39354178
+got here
+average vert to nearest pc point error: 0.04170580142082703
+average vert of  l_lowerleg  to nearest pc point error: 0.0437949473866595
+average vert of  r_lowerleg  to nearest pc point error: 0.05616463175481164
+average vert of  l_upperleg  to nearest pc point error: 0.02049937220563671
+average vert of  r_upperleg  to nearest pc point error: 0.05268256832479927
+average vert of  l_forearm  to nearest pc point error: 0.06792369258816548
+average vert of  r_forearm  to nearest pc point error: 0.1839827201870493
+average vert of  l_upperarm  to nearest pc point error: 0.020514424639155475
+average vert of  r_upperarm  to nearest pc point error: 0.04173316816335609
+average vert of  head  to nearest pc point error: 0.039634445309517194
+average vert of  torso  to nearest pc point error: 0.020100726411838465
+average pc point to nearest vert error: 0.04794674837443343
+adding to mesh 0
+adding to gt 66
+Precision is: 0.8162570888468809
+Recall is: 0.6204022988505747
+Average error from overlapping: 0.04155540759610931
+Average error: 0.22114693645990924
+height_in 68.5
+gender m
+weight_lbs 140.0
+prescribed_pose_type ['rollpi_plo', 'supine_plo', 'sl', 'sl', 'xl', 'rollpi_plo', 'rollpi', 'rollpi', 'phu', 'sl', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'rollpi', 'xl', 'phu', 'rollpi', 'hbh', 'rollpi_plo', 'phu', 'hbh', 'rollpi_plo', 'supine', 'rollpi_plo', 'hbh', 'rollpi_plo', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'sl', 'supine_plo', 'supine_plo', 'supine', 'supine_plo', 'supine', 'rollpi', 'xl', 'supine', 'rollpi']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S114
+height_in 68.5
+gender m
+weight_lbs 140.0
+prescribed_pose_type ['rollpi_plo', 'supine_plo', 'sl', 'sl', 'xl', 'rollpi_plo', 'rollpi', 'rollpi', 'phu', 'sl', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'rollpi', 'xl', 'phu', 'rollpi', 'hbh', 'rollpi_plo', 'phu', 'hbh', 'rollpi_plo', 'supine', 'rollpi_plo', 'hbh', 'rollpi_plo', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'sl', 'supine_plo', 'supine_plo', 'supine', 'supine_plo', 'supine', 'rollpi', 'xl', 'supine', 'rollpi']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  286.51062 max:  201.91362   sum:  322957.06   sum:  81679.42   sum:  81571.78 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  157.85217 max:  100.0 max:  286.51062 max:  201.91362   sum:  322957.06   sum:  0.0   sum:  177775.28   sum:  306424.12   sum:  81679.42   sum:  81571.78 
+0.013973128 1.7587982
+-0.13950047 1.0373601
+-0.20006213 0.16263565
+got here
+average vert to nearest pc point error: 0.031326555845038004
+average vert of  l_lowerleg  to nearest pc point error: 0.040874530333831816
+average vert of  r_lowerleg  to nearest pc point error: 0.03606195507550586
+average vert of  l_upperleg  to nearest pc point error: 0.03550128117389456
+average vert of  r_upperleg  to nearest pc point error: 0.03769704441655968
+average vert of  l_forearm  to nearest pc point error: 0.038170143703880215
+average vert of  r_forearm  to nearest pc point error: 0.09825106320467361
+average vert of  l_upperarm  to nearest pc point error: 0.03301390405010225
+average vert of  r_upperarm  to nearest pc point error: 0.019273389306126373
+average vert of  head  to nearest pc point error: 0.03252096921849561
+average vert of  torso  to nearest pc point error: 0.015602011349028862
+average pc point to nearest vert error: 0.03559460157464123
+adding to mesh 0
+adding to gt 22
+Precision is: 0.822803738317757
+Recall is: 0.7225869993434012
+Average error from overlapping: 0.03651976374375284
+Average error: 0.10198508522727273
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  272.78433 max:  181.65686   sum:  327578.06   sum:  81451.734   sum:  81430.26 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  158.19403 max:  100.0 max:  272.78433 max:  181.65686   sum:  327578.06   sum:  0.0   sum:  191645.5   sum:  330248.0   sum:  81451.734   sum:  81430.26 
+0.00559802 1.7439975
+-0.14696951 1.0027325
+-0.21050689 0.16264412
+got here
+average vert to nearest pc point error: 0.02905586968520648
+average vert of  l_lowerleg  to nearest pc point error: 0.03542879539806643
+average vert of  r_lowerleg  to nearest pc point error: 0.03744436199279674
+average vert of  l_upperleg  to nearest pc point error: 0.040899740821193145
+average vert of  r_upperleg  to nearest pc point error: 0.04266744731013179
+average vert of  l_forearm  to nearest pc point error: 0.0658069584836132
+average vert of  r_forearm  to nearest pc point error: 0.06984062093890991
+average vert of  l_upperarm  to nearest pc point error: 0.03265271695054504
+average vert of  r_upperarm  to nearest pc point error: 0.01983886877482181
+average vert of  head  to nearest pc point error: 0.023037908859222998
+average vert of  torso  to nearest pc point error: 0.0124273386009648
+average pc point to nearest vert error: 0.033234203248847106
+adding to mesh 0
+adding to gt 23
+Precision is: 0.8822674418604651
+Recall is: 0.7981591058514136
+Average error from overlapping: 0.038572642092257005
+Average error: 0.08428030303030302
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  332.82422 max:  177.81674   sum:  247788.69   sum:  82076.78   sum:  82065.06 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  248.2068 max:  100.0 max:  332.82422 max:  177.81674   sum:  247788.69   sum:  0.0   sum:  168551.75   sum:  297182.12   sum:  82076.78   sum:  82065.06 
+-0.016473759 1.7153147
+-0.024979714 0.62978804
+-0.28629708 0.24190366
+got here
+average vert to nearest pc point error: 0.054171139111107276
+average vert of  l_lowerleg  to nearest pc point error: 0.056287249225080514
+average vert of  r_lowerleg  to nearest pc point error: 0.045536714973146646
+average vert of  l_upperleg  to nearest pc point error: 0.03497284154278514
+average vert of  r_upperleg  to nearest pc point error: 0.04315482069773884
+average vert of  l_forearm  to nearest pc point error: 0.1312659409740628
+average vert of  r_forearm  to nearest pc point error: 0.15725405790585673
+average vert of  l_upperarm  to nearest pc point error: 0.047508047898566656
+average vert of  r_upperarm  to nearest pc point error: 0.1337593468841329
+average vert of  head  to nearest pc point error: 0.030037154367834416
+average vert of  torso  to nearest pc point error: 0.03180833451493163
+average pc point to nearest vert error: 0.03971334590644577
+adding to mesh 0
+adding to gt 36
+Precision is: 0.6207925010651896
+Recall is: 0.7953056768558951
+Average error from overlapping: 0.06323867536032944
+Average error: 0.1807159257898604
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  330.21545 max:  155.57977   sum:  265245.8   sum:  82140.14   sum:  82103.89 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  180.70747 max:  100.0 max:  330.21545 max:  155.57977   sum:  265245.8   sum:  0.0   sum:  162396.56   sum:  271099.06   sum:  82140.14   sum:  82103.89 
+0.083570614 1.6538553
+0.13351704 0.82182837
+-0.29249886 0.1723944
+got here
+average vert to nearest pc point error: 0.05466182489943322
+average vert of  l_lowerleg  to nearest pc point error: 0.0770336853304327
+average vert of  r_lowerleg  to nearest pc point error: 0.05807699571349882
+average vert of  l_upperleg  to nearest pc point error: 0.025728634849517793
+average vert of  r_upperleg  to nearest pc point error: 0.029436561881407114
+average vert of  l_forearm  to nearest pc point error: 0.15105287584000393
+average vert of  r_forearm  to nearest pc point error: 0.11732068618996662
+average vert of  l_upperarm  to nearest pc point error: 0.0886000562808312
+average vert of  r_upperarm  to nearest pc point error: 0.028139998024135582
+average vert of  head  to nearest pc point error: 0.03223660759816176
+average vert of  torso  to nearest pc point error: 0.03878510455892638
+average pc point to nearest vert error: 0.042357575077623694
+adding to mesh 0
+adding to gt 20
+Precision is: 0.7457191780821918
+Recall is: 0.7907399001361779
+Average error from overlapping: 0.06842637772675086
+Average error: 0.1313773686092242
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  358.17996 max:  166.12239   sum:  289583.12   sum:  81859.52   sum:  81812.99 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  262.17487 max:  100.0 max:  358.17996 max:  166.12239   sum:  289583.12   sum:  0.0   sum:  246836.75   sum:  346472.88   sum:  81859.52   sum:  81812.99 
+0.10761489 1.8076025
+0.10801576 0.8542651
+-0.18973371 0.22348508
+got here
+average vert to nearest pc point error: 0.05410411577639696
+average vert of  l_lowerleg  to nearest pc point error: 0.060400957422005616
+average vert of  r_lowerleg  to nearest pc point error: 0.09121173619913044
+average vert of  l_upperleg  to nearest pc point error: 0.04215766139909746
+average vert of  r_upperleg  to nearest pc point error: 0.06032072758758009
+average vert of  l_forearm  to nearest pc point error: 0.08397885181417487
+average vert of  r_forearm  to nearest pc point error: 0.0442361329350066
+average vert of  l_upperarm  to nearest pc point error: 0.02876091198042136
+average vert of  r_upperarm  to nearest pc point error: 0.06615868634537884
+average vert of  head  to nearest pc point error: 0.05297758613633018
+average vert of  torso  to nearest pc point error: 0.04088562162050656
+average pc point to nearest vert error: 0.058966800451457975
+adding to mesh 0
+adding to gt 35
+Precision is: 0.7711056163899682
+Recall is: 0.7120026092628833
+Average error from overlapping: 0.06324467475950528
+Average error: 0.14853089660743135
+height_in 64.0
+gender f
+weight_lbs 135.0
+prescribed_pose_type ['rollpi_plo', 'rollpi', 'phu', 'rollpi_plo', 'sl', 'sl', 'rollpi', 'hbh', 'rollpi_plo', 'sl', 'xl', 'supine_plo', 'rollpi_plo', 'sl', 'xl', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi_plo', 'supine', 'xl', 'phu', 'phu', 'supine_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'phu', 'supine', 'rollpi_plo', 'rollpi', 'xl', 'supine_plo', 'supine', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'hbh', 'hbh', 'rollpi', 'rollpi', 'supine', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S118
+height_in 64.0
+gender f
+weight_lbs 135.0
+prescribed_pose_type ['rollpi_plo', 'rollpi', 'phu', 'rollpi_plo', 'sl', 'sl', 'rollpi', 'hbh', 'rollpi_plo', 'sl', 'xl', 'supine_plo', 'rollpi_plo', 'sl', 'xl', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi_plo', 'supine', 'xl', 'phu', 'phu', 'supine_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'phu', 'supine', 'rollpi_plo', 'rollpi', 'xl', 'supine_plo', 'supine', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'hbh', 'hbh', 'rollpi', 'rollpi', 'supine', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  373.93176 max:  231.33714   sum:  246171.33   sum:  82149.61   sum:  82144.59 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  265.8932 max:  100.0 max:  373.93176 max:  231.33714   sum:  246171.33   sum:  0.0   sum:  173119.36   sum:  246556.42   sum:  82149.61   sum:  82144.59 
+0.38466763 1.8577913
+0.08544557 0.94634736
+-0.27969313 0.17947078
+got here
+average vert to nearest pc point error: 0.049311886117664426
+average vert of  l_lowerleg  to nearest pc point error: 0.027722536437661736
+average vert of  r_lowerleg  to nearest pc point error: 0.06393769640121506
+average vert of  l_upperleg  to nearest pc point error: 0.03780462605545942
+average vert of  r_upperleg  to nearest pc point error: 0.022367155459161982
+average vert of  l_forearm  to nearest pc point error: 0.10355785488471904
+average vert of  r_forearm  to nearest pc point error: 0.1158971856433684
+average vert of  l_upperarm  to nearest pc point error: 0.09919828598448437
+average vert of  r_upperarm  to nearest pc point error: 0.047289388704714275
+average vert of  head  to nearest pc point error: 0.04167228051520077
+average vert of  torso  to nearest pc point error: 0.0454557514578927
+average pc point to nearest vert error: 0.04435744509674766
+adding to mesh 0
+adding to gt 21
+Precision is: 0.7249382716049383
+Recall is: 0.6977186311787072
+Average error from overlapping: 0.06553048365122616
+Average error: 0.14842869222096955
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  497.61322 max:  355.37863   sum:  301084.3   sum:  82151.234   sum:  82151.2 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  156.99762 max:  100.0 max:  497.61322 max:  355.37863   sum:  301084.3   sum:  0.0   sum:  135766.22   sum:  283729.88   sum:  82151.234   sum:  82151.2 
+0.107784584 1.7067956
+0.1349598 0.8489953
+-0.31132513 0.15723832
+got here
+average vert to nearest pc point error: 0.03604365242028368
+average vert of  l_lowerleg  to nearest pc point error: 0.019377012148283145
+average vert of  r_lowerleg  to nearest pc point error: 0.029332234449694003
+average vert of  l_upperleg  to nearest pc point error: 0.022028061143731306
+average vert of  r_upperleg  to nearest pc point error: 0.03994671983411036
+average vert of  l_forearm  to nearest pc point error: 0.16504132294581017
+average vert of  r_forearm  to nearest pc point error: 0.08698490264291987
+average vert of  l_upperarm  to nearest pc point error: 0.024115423646080266
+average vert of  r_upperarm  to nearest pc point error: 0.017857707053518745
+average vert of  head  to nearest pc point error: 0.03145495843223284
+average vert of  torso  to nearest pc point error: 0.025167979761727775
+average pc point to nearest vert error: 0.034300923376756956
+adding to mesh 0
+adding to gt 20
+Precision is: 0.8624119353501865
+Recall is: 0.7248345524207593
+Average error from overlapping: 0.03982610523786641
+Average error: 0.09699363877614738
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  237.90471 max:  120.25109   sum:  239060.11   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  206.33412 max:  100.0 max:  237.90471 max:  120.25109   sum:  239060.11   sum:  0.0   sum:  160231.88   sum:  264116.22   sum:  82151.24   sum:  82151.234 
+0.23190047 1.7533666
+-0.056751523 0.5940862
+-0.20836899 0.19641365
+got here
+average vert to nearest pc point error: 0.04741946955352357
+average vert of  l_lowerleg  to nearest pc point error: 0.04637212841533378
+average vert of  r_lowerleg  to nearest pc point error: 0.05487473111514711
+average vert of  l_upperleg  to nearest pc point error: 0.038098745858065754
+average vert of  r_upperleg  to nearest pc point error: 0.05226446493019195
+average vert of  l_forearm  to nearest pc point error: 0.0373038704381315
+average vert of  r_forearm  to nearest pc point error: 0.10509897886880644
+average vert of  l_upperarm  to nearest pc point error: 0.020656837622363464
+average vert of  r_upperarm  to nearest pc point error: 0.11667348671951311
+average vert of  head  to nearest pc point error: 0.039371827459271105
+average vert of  torso  to nearest pc point error: 0.03644396418339125
+average pc point to nearest vert error: 0.04209960638271402
+adding to mesh 0
+adding to gt 27
+Precision is: 0.7297861241523214
+Recall is: 0.7699504678040726
+Average error from overlapping: 0.06542351679771266
+Average error: 0.14175347965738758
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  181.49663 max:  109.1737   sum:  249020.94   sum:  82123.234   sum:  81923.56 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  211.45164 max:  100.0 max:  181.49663 max:  109.1737   sum:  249020.94   sum:  0.0   sum:  183678.88   sum:  281162.62   sum:  82123.234   sum:  81923.56 
+0.22612055 1.797691
+0.19245057 0.8182671
+-0.22064152 0.15330845
+got here
+average vert to nearest pc point error: 0.05242494604806229
+average vert of  l_lowerleg  to nearest pc point error: 0.029471842793891947
+average vert of  r_lowerleg  to nearest pc point error: 0.0780916271017781
+average vert of  l_upperleg  to nearest pc point error: 0.027383835484611804
+average vert of  r_upperleg  to nearest pc point error: 0.031988778781483686
+average vert of  l_forearm  to nearest pc point error: 0.11183264120948876
+average vert of  r_forearm  to nearest pc point error: 0.12206123559212138
+average vert of  l_upperarm  to nearest pc point error: 0.0705412065602643
+average vert of  r_upperarm  to nearest pc point error: 0.05033305945604313
+average vert of  head  to nearest pc point error: 0.026906394914737383
+average vert of  torso  to nearest pc point error: 0.049289447083715035
+average pc point to nearest vert error: 0.04541344272807597
+adding to mesh 0
+adding to gt 20
+Precision is: 0.6957831325301205
+Recall is: 0.7162790697674418
+Average error from overlapping: 0.07105384199134199
+Average error: 0.14379894726485634
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  198.51067 max:  129.31274   sum:  286707.84   sum:  82143.73   sum:  82064.09 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  319.12375 max:  100.0 max:  198.51067 max:  129.31274   sum:  286707.84   sum:  0.0   sum:  252081.1   sum:  302521.94   sum:  82143.73   sum:  82064.09 
+0.15012814 1.826851
+0.051138114 0.88770914
+-0.19568062 0.27828175
+got here
+average vert to nearest pc point error: 0.05665549785128026
+average vert of  l_lowerleg  to nearest pc point error: 0.09310758058879164
+average vert of  r_lowerleg  to nearest pc point error: 0.04760263348068447
+average vert of  l_upperleg  to nearest pc point error: 0.03124278542947237
+average vert of  r_upperleg  to nearest pc point error: 0.036866964202961996
+average vert of  l_forearm  to nearest pc point error: 0.13053923288924701
+average vert of  r_forearm  to nearest pc point error: 0.17628012581552469
+average vert of  l_upperarm  to nearest pc point error: 0.023214131863542743
+average vert of  r_upperarm  to nearest pc point error: 0.09814624985952915
+average vert of  head  to nearest pc point error: 0.05155022550248505
+average vert of  torso  to nearest pc point error: 0.02730884987515112
+average pc point to nearest vert error: 0.05305978978885409
+adding to mesh 0
+adding to gt 46
+Precision is: 0.7992424242424242
+Recall is: 0.663986013986014
+Average error from overlapping: 0.0547992364402317
+Average error: 0.16388447707521728
+height_in 73.0
+gender m
+weight_lbs 185.0
+prescribed_pose_type ['rollpi_plo', 'sl', 'phu', 'rollpi_plo', 'phu', 'xl', 'supine_plo', 'rollpi', 'rollpi', 'rollpi', 'hbh', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'hbh', 'sl', 'xl', 'rollpi_plo', 'phu', 'sl', 'supine', 'sl', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'xl', 'rollpi', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'supine', 'rollpi', 'hbh', 'xl', 'supine', 'rollpi_plo', 'rollpi', 'rollpi', 'supine', 'supine_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S121
+height_in 73.0
+gender m
+weight_lbs 185.0
+prescribed_pose_type ['rollpi_plo', 'sl', 'phu', 'rollpi_plo', 'phu', 'xl', 'supine_plo', 'rollpi', 'rollpi', 'rollpi', 'hbh', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'hbh', 'sl', 'xl', 'rollpi_plo', 'phu', 'sl', 'supine', 'sl', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'xl', 'rollpi', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'supine', 'rollpi', 'hbh', 'xl', 'supine', 'rollpi_plo', 'rollpi', 'rollpi', 'supine', 'supine_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  171.45863 max:  125.431694   sum:  367626.8   sum:  82025.94   sum:  81815.445 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  155.57034 max:  100.0 max:  171.45863 max:  125.431694   sum:  367626.8   sum:  0.0   sum:  191165.94   sum:  335074.38   sum:  82025.94   sum:  81815.445 
+0.055019896 1.7912997
+-0.12691171 0.836974
+-0.26367298 0.1789107
+got here
+average vert to nearest pc point error: 0.039278905111047466
+average vert of  l_lowerleg  to nearest pc point error: 0.05550980478304702
+average vert of  r_lowerleg  to nearest pc point error: 0.04938840178177146
+average vert of  l_upperleg  to nearest pc point error: 0.053351275402371084
+average vert of  r_upperleg  to nearest pc point error: 0.06767438222051939
+average vert of  l_forearm  to nearest pc point error: 0.061042256731716704
+average vert of  r_forearm  to nearest pc point error: 0.05721939344491198
+average vert of  l_upperarm  to nearest pc point error: 0.03875805195901056
+average vert of  r_upperarm  to nearest pc point error: 0.033863223232241633
+average vert of  head  to nearest pc point error: 0.01641438504637048
+average vert of  torso  to nearest pc point error: 0.018311766524987828
+average pc point to nearest vert error: 0.04077966914128768
+adding to mesh 0
+adding to gt 26
+Precision is: 0.8623118796029459
+Recall is: 0.7120571126388154
+Average error from overlapping: 0.04765387114741924
+Average error: 0.11156398385565053
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  144.94067 max:  100.7347   sum:  378819.88   sum:  81900.984   sum:  81687.32 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  162.46977 max:  100.0 max:  144.94067 max:  100.7347   sum:  378819.88   sum:  0.0   sum:  215302.98   sum:  355714.88   sum:  81900.984   sum:  81687.32 
+0.0049490146 1.9004291
+-0.05815323 0.91190517
+-0.22181009 0.18772875
+got here
+average vert to nearest pc point error: 0.03137431011346285
+average vert of  l_lowerleg  to nearest pc point error: 0.018653883353884265
+average vert of  r_lowerleg  to nearest pc point error: 0.06538174801328073
+average vert of  l_upperleg  to nearest pc point error: 0.013919681070553754
+average vert of  r_upperleg  to nearest pc point error: 0.04533856948670195
+average vert of  l_forearm  to nearest pc point error: 0.06596705048825396
+average vert of  r_forearm  to nearest pc point error: 0.04348266195263419
+average vert of  l_upperarm  to nearest pc point error: 0.02925662574333992
+average vert of  r_upperarm  to nearest pc point error: 0.05428396056461635
+average vert of  head  to nearest pc point error: 0.024725073063753992
+average vert of  torso  to nearest pc point error: 0.019519604767939007
+average pc point to nearest vert error: 0.03584275402871918
+adding to mesh 0
+adding to gt 26
+Precision is: 0.8605882352941177
+Recall is: 0.7400101163378857
+Average error from overlapping: 0.038004741968557756
+Average error: 0.10138479561878952
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  241.98874 max:  171.72954   sum:  273152.88   sum:  81960.04   sum:  81931.17 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  207.30084 max:  100.0 max:  241.98874 max:  171.72954   sum:  273152.88   sum:  0.0   sum:  216987.1   sum:  329939.94   sum:  81960.04   sum:  81931.17 
+-0.04424042 1.746256
+-0.037570123 0.784631
+-0.21747212 0.2148699
+got here
+average vert to nearest pc point error: 0.07766250046350796
+average vert of  l_lowerleg  to nearest pc point error: 0.2245082858307506
+average vert of  r_lowerleg  to nearest pc point error: 0.05066390978420678
+average vert of  l_upperleg  to nearest pc point error: 0.054502892826068516
+average vert of  r_upperleg  to nearest pc point error: 0.06363644330949554
+average vert of  l_forearm  to nearest pc point error: 0.02704943574032254
+average vert of  r_forearm  to nearest pc point error: 0.04856286732465572
+average vert of  l_upperarm  to nearest pc point error: 0.03759082526147578
+average vert of  r_upperarm  to nearest pc point error: 0.11635700821257813
+average vert of  head  to nearest pc point error: 0.053554724212679455
+average vert of  torso  to nearest pc point error: 0.07178639059799061
+average pc point to nearest vert error: 0.07766841376901044
+adding to mesh 0
+adding to gt 30
+Precision is: 0.6999617298124761
+Recall is: 0.7122274143302181
+Average error from overlapping: 0.11161871241115363
+Average error: 0.19466176909307878
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  234.75903 max:  164.94995   sum:  285886.3   sum:  82101.14   sum:  82090.03 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  258.6886 max:  100.0 max:  234.75903 max:  164.94995   sum:  285886.3   sum:  0.0   sum:  204277.28   sum:  267299.62   sum:  82101.14   sum:  82090.03 
+-0.046615187 1.7913979
+0.14007314 1.0062504
+-0.27474725 0.19352998
+got here
+average vert to nearest pc point error: 0.051984380796181354
+average vert of  l_lowerleg  to nearest pc point error: 0.048289308158255384
+average vert of  r_lowerleg  to nearest pc point error: 0.08564715002836311
+average vert of  l_upperleg  to nearest pc point error: 0.05810417854671483
+average vert of  r_upperleg  to nearest pc point error: 0.0215928057428174
+average vert of  l_forearm  to nearest pc point error: 0.09206786238618099
+average vert of  r_forearm  to nearest pc point error: 0.09153362148083498
+average vert of  l_upperarm  to nearest pc point error: 0.08684190814270788
+average vert of  r_upperarm  to nearest pc point error: 0.033594867752508896
+average vert of  head  to nearest pc point error: 0.03202808226159422
+average vert of  torso  to nearest pc point error: 0.043712624801034224
+average pc point to nearest vert error: 0.05052518894984666
+adding to mesh 0
+adding to gt 25
+Precision is: 0.7492223950233281
+Recall is: 0.7735849056603774
+Average error from overlapping: 0.056757265179034774
+Average error: 0.14543207908163264
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  328.48093 max:  214.37259   sum:  304062.25   sum:  81159.805   sum:  80858.11 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  250.88635 max:  100.0 max:  328.48093 max:  214.37259   sum:  304062.25   sum:  0.0   sum:  318824.88   sum:  389396.88   sum:  81159.805   sum:  80858.11 
+0.124895886 1.9403394
+0.018250387 0.8200853
+-0.20839544 0.2737725
+got here
+average vert to nearest pc point error: 0.04498275724048991
+average vert of  l_lowerleg  to nearest pc point error: 0.040429783067290906
+average vert of  r_lowerleg  to nearest pc point error: 0.07303479053644595
+average vert of  l_upperleg  to nearest pc point error: 0.0459931477253634
+average vert of  r_upperleg  to nearest pc point error: 0.05427022648850496
+average vert of  l_forearm  to nearest pc point error: 0.1300493222695706
+average vert of  r_forearm  to nearest pc point error: 0.07886126055492414
+average vert of  l_upperarm  to nearest pc point error: 0.037476658083117204
+average vert of  r_upperarm  to nearest pc point error: 0.02543400652432323
+average vert of  head  to nearest pc point error: 0.0393354363249891
+average vert of  torso  to nearest pc point error: 0.018097003675104754
+average pc point to nearest vert error: 0.0533157071455425
+adding to mesh 0
+adding to gt 45
+Precision is: 0.808002581477896
+Recall is: 0.6849015317286652
+Average error from overlapping: 0.05180161741214058
+Average error: 0.16459156669019054
+height_in 65.0
+gender f
+weight_lbs 120.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'phu', 'supine_plo', 'sl', 'xl', 'sl', 'rollpi_plo', 'rollpi', 'rollpi', 'sl', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi', 'rollpi_plo', 'phu', 'rollpi_plo', 'phu', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi', 'supine', 'supine_plo', 'hbh', 'rollpi', 'supine', 'hbh', 'supine_plo', 'xl', 'rollpi', 'rollpi', 'xl', 'rollpi', 'hbh', 'rollpi_plo', 'supine', 'xl', 'supine', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S130
+height_in 65.0
+gender f
+weight_lbs 120.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'phu', 'supine_plo', 'sl', 'xl', 'sl', 'rollpi_plo', 'rollpi', 'rollpi', 'sl', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi', 'rollpi_plo', 'phu', 'rollpi_plo', 'phu', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi', 'supine', 'supine_plo', 'hbh', 'rollpi', 'supine', 'hbh', 'supine_plo', 'xl', 'rollpi', 'rollpi', 'xl', 'rollpi', 'hbh', 'rollpi_plo', 'supine', 'xl', 'supine', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  407.25125 max:  291.37903   sum:  268839.94   sum:  82142.27   sum:  82083.164 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  150.64462 max:  100.0 max:  407.25125 max:  291.37903   sum:  268839.94   sum:  0.0   sum:  149391.0   sum:  302111.2   sum:  82142.27   sum:  82083.164 
+0.109111115 1.8034908
+-0.050031576 0.79492676
+-0.22342485 0.15118857
+got here
+average vert to nearest pc point error: 0.05265878031692293
+average vert of  l_lowerleg  to nearest pc point error: 0.03555499338616741
+average vert of  r_lowerleg  to nearest pc point error: 0.05549162113145703
+average vert of  l_upperleg  to nearest pc point error: 0.0407348003902257
+average vert of  r_upperleg  to nearest pc point error: 0.058224907254267995
+average vert of  l_forearm  to nearest pc point error: 0.13076993570781362
+average vert of  r_forearm  to nearest pc point error: 0.12587306400372722
+average vert of  l_upperarm  to nearest pc point error: 0.01796871450680298
+average vert of  r_upperarm  to nearest pc point error: 0.05107152162941957
+average vert of  head  to nearest pc point error: 0.04345143346375874
+average vert of  torso  to nearest pc point error: 0.03993361926449787
+average pc point to nearest vert error: 0.05045959214375025
+adding to mesh 0
+adding to gt 18
+Precision is: 0.8189827793352022
+Recall is: 0.7324498567335244
+Average error from overlapping: 0.06501283618581907
+Average error: 0.11064619297163995
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  476.75537 max:  289.26016   sum:  263397.44   sum:  81965.54   sum:  81619.64 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  164.97102 max:  100.0 max:  476.75537 max:  289.26016   sum:  263397.44   sum:  0.0   sum:  161344.0   sum:  279108.84   sum:  81965.54   sum:  81619.64 
+0.21809788 1.8823432
+0.0073113553 0.8222747
+-0.26936674 0.15717323
+got here
+average vert to nearest pc point error: 0.06287131731620595
+average vert of  l_lowerleg  to nearest pc point error: 0.04371637286934446
+average vert of  r_lowerleg  to nearest pc point error: 0.08122527387515607
+average vert of  l_upperleg  to nearest pc point error: 0.05937751185329727
+average vert of  r_upperleg  to nearest pc point error: 0.0722663031599824
+average vert of  l_forearm  to nearest pc point error: 0.1513777518378814
+average vert of  r_forearm  to nearest pc point error: 0.11071152319795097
+average vert of  l_upperarm  to nearest pc point error: 0.029726006762827054
+average vert of  r_upperarm  to nearest pc point error: 0.07068795796319059
+average vert of  head  to nearest pc point error: 0.04749761690309418
+average vert of  torso  to nearest pc point error: 0.0450179746002008
+average pc point to nearest vert error: 0.05986065022212699
+adding to mesh 0
+adding to gt 19
+Precision is: 0.8188139059304703
+Recall is: 0.7243125904486252
+Average error from overlapping: 0.08010427072927073
+Average error: 0.12691670564390398
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  254.53972 max:  129.68997   sum:  236390.19   sum:  82151.21   sum:  82141.73 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  295.83182 max:  100.0 max:  254.53972 max:  129.68997   sum:  236390.19   sum:  0.0   sum:  236769.38   sum:  289608.8   sum:  82151.21   sum:  82141.73 
+0.36478615 1.8942996
+0.029431533 0.606853
+-0.27095813 0.25942346
+got here
+average vert to nearest pc point error: 0.06676452791353331
+average vert of  l_lowerleg  to nearest pc point error: 0.06248894848253503
+average vert of  r_lowerleg  to nearest pc point error: 0.10522542605983369
+average vert of  l_upperleg  to nearest pc point error: 0.05144428512335209
+average vert of  r_upperleg  to nearest pc point error: 0.05303630387806284
+average vert of  l_forearm  to nearest pc point error: 0.05376869419822189
+average vert of  r_forearm  to nearest pc point error: 0.1499477029780622
+average vert of  l_upperarm  to nearest pc point error: 0.03478169948531469
+average vert of  r_upperarm  to nearest pc point error: 0.18554297330786
+average vert of  head  to nearest pc point error: 0.050985199274561854
+average vert of  torso  to nearest pc point error: 0.043911056535382395
+average pc point to nearest vert error: 0.057685491221179726
+adding to mesh 0
+adding to gt 38
+Precision is: 0.5708661417322834
+Recall is: 0.6398234969663541
+Average error from overlapping: 0.08483081896551724
+Average error: 0.22290875232774673
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  446.09094 max:  225.19524   sum:  224478.25   sum:  81893.7   sum:  81651.55 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  241.29178 max:  100.0 max:  446.09094 max:  225.19524   sum:  224478.25   sum:  0.0   sum:  191941.25   sum:  261240.94   sum:  81893.7   sum:  81651.55 
+0.26884812 1.8084623
+0.2255226 0.8067157
+-0.22666752 0.19886614
+got here
+average vert to nearest pc point error: 0.05613265962801975
+average vert of  l_lowerleg  to nearest pc point error: 0.05606397250177956
+average vert of  r_lowerleg  to nearest pc point error: 0.06239064211708877
+average vert of  l_upperleg  to nearest pc point error: 0.04690593921968807
+average vert of  r_upperleg  to nearest pc point error: 0.034298497101221716
+average vert of  l_forearm  to nearest pc point error: 0.10902428578541158
+average vert of  r_forearm  to nearest pc point error: 0.12601400166566903
+average vert of  l_upperarm  to nearest pc point error: 0.14909830449361203
+average vert of  r_upperarm  to nearest pc point error: 0.03313176670425255
+average vert of  head  to nearest pc point error: 0.03499088203487733
+average vert of  torso  to nearest pc point error: 0.0431352980663562
+average pc point to nearest vert error: 0.05086327577022726
+adding to mesh 0
+adding to gt 26
+Precision is: 0.7401191120736329
+Recall is: 0.6730674544559331
+Average error from overlapping: 0.07052075713240673
+Average error: 0.1503770908004779
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  243.51959 max:  158.54414   sum:  265245.8   sum:  82108.05   sum:  81836.69 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  296.14157 max:  100.0 max:  243.51959 max:  158.54414   sum:  265245.8   sum:  0.0   sum:  269113.1   sum:  312688.16   sum:  82108.05   sum:  81836.69 
+0.16326936 1.8303035
+0.16558899 0.7874954
+-0.17130822 0.31174168
+got here
+average vert to nearest pc point error: 0.05936708935370499
+average vert of  l_lowerleg  to nearest pc point error: 0.039989109724352656
+average vert of  r_lowerleg  to nearest pc point error: 0.04502222670135311
+average vert of  l_upperleg  to nearest pc point error: 0.04079272880507884
+average vert of  r_upperleg  to nearest pc point error: 0.07793930692363228
+average vert of  l_forearm  to nearest pc point error: 0.16848550795414832
+average vert of  r_forearm  to nearest pc point error: 0.23476026815977125
+average vert of  l_upperarm  to nearest pc point error: 0.06253664257519513
+average vert of  r_upperarm  to nearest pc point error: 0.08666495822603536
+average vert of  head  to nearest pc point error: 0.0401608120102305
+average vert of  torso  to nearest pc point error: 0.0193941135261344
+average pc point to nearest vert error: 0.0524063394523073
+adding to mesh 0
+adding to gt 50
+Precision is: 0.8503198294243071
+Recall is: 0.6725126475548061
+Average error from overlapping: 0.05488308676028084
+Average error: 0.16645016586248493
+height_in 64.5
+gender f
+weight_lbs 121.0
+prescribed_pose_type ['rollpi', 'phu', 'xl', 'rollpi_plo', 'phu', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi', 'rollpi', 'hbh', 'rollpi', 'phu', 'rollpi_plo', 'rollpi', 'phu', 'sl', 'sl', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'sl', 'rollpi_plo', 'xl', 'rollpi', 'sl', 'rollpi_plo', 'supine', 'rollpi', 'supine', 'supine', 'rollpi_plo', 'xl', 'rollpi', 'supine_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'supine', 'hbh', 'xl', 'hbh', 'supine_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S134
+height_in 64.5
+gender f
+weight_lbs 121.0
+prescribed_pose_type ['rollpi', 'phu', 'xl', 'rollpi_plo', 'phu', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi', 'rollpi', 'hbh', 'rollpi', 'phu', 'rollpi_plo', 'rollpi', 'phu', 'sl', 'sl', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'sl', 'rollpi_plo', 'xl', 'rollpi', 'sl', 'rollpi_plo', 'supine', 'rollpi', 'supine', 'supine', 'rollpi_plo', 'xl', 'rollpi', 'supine_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'supine', 'hbh', 'xl', 'hbh', 'supine_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  384.20544 max:  254.53568   sum:  315358.06   sum:  82151.22   sum:  82141.61 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  154.05244 max:  100.0 max:  384.20544 max:  254.53568   sum:  315358.06   sum:  0.0   sum:  168144.1   sum:  321211.38   sum:  82151.22   sum:  82141.61 
+0.08871679 1.6996969
+-0.05992684 0.7913033
+-0.267899 0.15076396
+got here
+average vert to nearest pc point error: 0.03075009573652181
+average vert of  l_lowerleg  to nearest pc point error: 0.026824153311324483
+average vert of  r_lowerleg  to nearest pc point error: 0.02745768761481691
+average vert of  l_upperleg  to nearest pc point error: 0.021533626202781826
+average vert of  r_upperleg  to nearest pc point error: 0.02463371332954267
+average vert of  l_forearm  to nearest pc point error: 0.11684637908187337
+average vert of  r_forearm  to nearest pc point error: 0.08432370302713692
+average vert of  l_upperarm  to nearest pc point error: 0.010910912712821718
+average vert of  r_upperarm  to nearest pc point error: 0.03276240164116857
+average vert of  head  to nearest pc point error: 0.02246160585275027
+average vert of  torso  to nearest pc point error: 0.019836926205576286
+average pc point to nearest vert error: 0.03216140858444682
+adding to mesh 0
+adding to gt 21
+Precision is: 0.8398002305032655
+Recall is: 0.750944692545517
+Average error from overlapping: 0.03494253202195792
+Average error: 0.08821401742788462
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  235.20253 max:  185.03265   sum:  291226.16   sum:  82143.19   sum:  82047.72 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  160.80077 max:  100.0 max:  235.20253 max:  185.03265   sum:  291226.16   sum:  0.0   sum:  154123.94   sum:  299030.5   sum:  82143.19   sum:  82047.72 
+0.07485475 1.647344
+-0.059440482 0.8619127
+-0.22066873 0.16144118
+got here
+average vert to nearest pc point error: 0.033200971493165955
+average vert of  l_lowerleg  to nearest pc point error: 0.03770508916756302
+average vert of  r_lowerleg  to nearest pc point error: 0.03739783037839623
+average vert of  l_upperleg  to nearest pc point error: 0.036569227557399143
+average vert of  r_upperleg  to nearest pc point error: 0.0385283646088457
+average vert of  l_forearm  to nearest pc point error: 0.09210770718972089
+average vert of  r_forearm  to nearest pc point error: 0.05354579603572538
+average vert of  l_upperarm  to nearest pc point error: 0.0149631312702826
+average vert of  r_upperarm  to nearest pc point error: 0.029694341406109666
+average vert of  head  to nearest pc point error: 0.020459298428299955
+average vert of  torso  to nearest pc point error: 0.023768458285768845
+average pc point to nearest vert error: 0.0365065332739342
+adding to mesh 0
+adding to gt 22
+Precision is: 0.8727650727650728
+Recall is: 0.7091216216216216
+Average error from overlapping: 0.039983325393044306
+Average error: 0.09489991579914268
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  368.50854 max:  196.20107   sum:  221294.9   sum:  82151.234   sum:  82151.195 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  279.55014 max:  100.0 max:  368.50854 max:  196.20107   sum:  221294.9   sum:  0.0   sum:  158595.03   sum:  241935.4   sum:  82151.234   sum:  82151.195 
+0.14269195 1.6404287
+-0.22746094 0.5627852
+-0.276409 0.1965397
+got here
+average vert to nearest pc point error: 0.04448308839835007
+average vert of  l_lowerleg  to nearest pc point error: 0.0677368127028465
+average vert of  r_lowerleg  to nearest pc point error: 0.07120096967110594
+average vert of  l_upperleg  to nearest pc point error: 0.016122705540688845
+average vert of  r_upperleg  to nearest pc point error: 0.05565280488167165
+average vert of  l_forearm  to nearest pc point error: 0.0423179975811089
+average vert of  r_forearm  to nearest pc point error: 0.10300033083034336
+average vert of  l_upperarm  to nearest pc point error: 0.02376214969991963
+average vert of  r_upperarm  to nearest pc point error: 0.1032095526827362
+average vert of  head  to nearest pc point error: 0.024794221168904257
+average vert of  torso  to nearest pc point error: 0.02998004694535964
+average pc point to nearest vert error: 0.04402592607460074
+adding to mesh 0
+adding to gt 28
+Precision is: 0.7464935064935065
+Recall is: 0.7163509471585244
+Average error from overlapping: 0.05313500347947112
+Average error: 0.1326425922213312
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  398.29895 max:  207.611   sum:  231153.06   sum:  82146.0   sum:  82101.4 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  254.82425 max:  100.0 max:  398.29895 max:  207.611   sum:  231153.06   sum:  0.0   sum:  143870.44   sum:  226840.11   sum:  82146.0   sum:  82101.4 
+0.2132852 1.6099902
+0.16244222 0.8884977
+-0.20775679 0.14892358
+got here
+average vert to nearest pc point error: 0.04205230175259817
+average vert of  l_lowerleg  to nearest pc point error: 0.05740421123644052
+average vert of  r_lowerleg  to nearest pc point error: 0.05568554930307669
+average vert of  l_upperleg  to nearest pc point error: 0.044066254539624226
+average vert of  r_upperleg  to nearest pc point error: 0.025177067060647793
+average vert of  l_forearm  to nearest pc point error: 0.06669818907532879
+average vert of  r_forearm  to nearest pc point error: 0.04891669680287222
+average vert of  l_upperarm  to nearest pc point error: 0.0620200109068644
+average vert of  r_upperarm  to nearest pc point error: 0.02670744789687514
+average vert of  head  to nearest pc point error: 0.02262635511512362
+average vert of  torso  to nearest pc point error: 0.038198196384877224
+average pc point to nearest vert error: 0.048085321280611375
+adding to mesh 0
+adding to gt 16
+Precision is: 0.8131808278867102
+Recall is: 0.6905642923219242
+Average error from overlapping: 0.05801280977896852
+Average error: 0.11353418163672654
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  190.16351 max:  153.35674   sum:  290404.62   sum:  82147.84   sum:  82125.8 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  186.4344 max:  100.0 max:  190.16351 max:  153.35674   sum:  290404.62   sum:  0.0   sum:  223159.75   sum:  329734.56   sum:  82147.84   sum:  82125.8 
+0.12941407 1.7949344
+0.12803693 1.0457082
+-0.18464607 0.1786819
+got here
+average vert to nearest pc point error: 0.033518128052061245
+average vert of  l_lowerleg  to nearest pc point error: 0.0466701326180029
+average vert of  r_lowerleg  to nearest pc point error: 0.026424602012523397
+average vert of  l_upperleg  to nearest pc point error: 0.035103293416011844
+average vert of  r_upperleg  to nearest pc point error: 0.012359341389507476
+average vert of  l_forearm  to nearest pc point error: 0.0862289372184621
+average vert of  r_forearm  to nearest pc point error: 0.12009088491615594
+average vert of  l_upperarm  to nearest pc point error: 0.03828974297624407
+average vert of  r_upperarm  to nearest pc point error: 0.08866633001866212
+average vert of  head  to nearest pc point error: 0.023475996746396107
+average vert of  torso  to nearest pc point error: 0.019329656055477547
+average pc point to nearest vert error: 0.0386791645434818
+adding to mesh 0
+adding to gt 25
+Precision is: 0.8945880452342488
+Recall is: 0.7380873042319227
+Average error from overlapping: 0.03952003386004514
+Average error: 0.08933265634580012
+height_in 62.0
+gender f
+weight_lbs 160.0
+prescribed_pose_type ['rollpi_plo', 'rollpi_plo', 'phu', 'sl', 'rollpi_plo', 'sl', 'rollpi_plo', 'rollpi', 'rollpi', 'phu', 'rollpi', 'xl', 'rollpi', 'xl', 'rollpi_plo', 'phu', 'rollpi_plo', 'phu', 'rollpi_plo', 'supine_plo', 'rollpi', 'sl', 'xl', 'rollpi', 'xl', 'supine_plo', 'hbh', 'rollpi', 'sl', 'rollpi', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'supine_plo', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi_plo', 'supine', 'hbh', 'supine', 'rollpi', 'supine', 'supine']
+p_select_pose_type ['no_instr', 'r_lateral', 'l_lateral', 'prone', 'supine']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S140
+height_in 62.0
+gender f
+weight_lbs 160.0
+prescribed_pose_type ['rollpi_plo', 'rollpi_plo', 'phu', 'sl', 'rollpi_plo', 'sl', 'rollpi_plo', 'rollpi', 'rollpi', 'phu', 'rollpi', 'xl', 'rollpi', 'xl', 'rollpi_plo', 'phu', 'rollpi_plo', 'phu', 'rollpi_plo', 'supine_plo', 'rollpi', 'sl', 'xl', 'rollpi', 'xl', 'supine_plo', 'hbh', 'rollpi', 'sl', 'rollpi', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'supine_plo', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi_plo', 'supine', 'hbh', 'supine', 'rollpi', 'supine', 'supine']
+p_select_pose_type ['no_instr', 'r_lateral', 'l_lateral', 'prone', 'supine']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  197.71614 max:  131.23079   sum:  321930.16   sum:  82151.234   sum:  82149.84 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  152.19106 max:  100.0 max:  197.71614 max:  131.23079   sum:  321930.16   sum:  0.0   sum:  150270.03   sum:  298927.8   sum:  82151.234   sum:  82149.84 
+0.056278627 1.7003982
+-0.09972705 1.013667
+-0.21186902 0.16099034
+got here
+average vert to nearest pc point error: 0.04105682662811903
+average vert of  l_lowerleg  to nearest pc point error: 0.05031457992099798
+average vert of  r_lowerleg  to nearest pc point error: 0.04676132679603079
+average vert of  l_upperleg  to nearest pc point error: 0.04731828564875011
+average vert of  r_upperleg  to nearest pc point error: 0.04916445303169699
+average vert of  l_forearm  to nearest pc point error: 0.10732819358584292
+average vert of  r_forearm  to nearest pc point error: 0.06317390196617628
+average vert of  l_upperarm  to nearest pc point error: 0.03846345832292715
+average vert of  r_upperarm  to nearest pc point error: 0.04822414550372845
+average vert of  head  to nearest pc point error: 0.04270038020858413
+average vert of  torso  to nearest pc point error: 0.024709257464826228
+average pc point to nearest vert error: 0.044511590555638164
+adding to mesh 0
+adding to gt 22
+Precision is: 0.7926070038910505
+Recall is: 0.6466666666666666
+Average error from overlapping: 0.04763254786450663
+Average error: 0.12520482622861798
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  223.89641 max:  162.267   sum:  263294.75   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  335.7935 max:  100.0 max:  223.89641 max:  162.267   sum:  263294.75   sum:  0.0   sum:  218353.89   sum:  269353.4   sum:  82151.24   sum:  82151.234 
+0.050834756 1.5913254
+-0.13181718 0.67134
+-0.30550468 0.22855791
+got here
+average vert to nearest pc point error: 0.06193590277266624
+average vert of  l_lowerleg  to nearest pc point error: 0.12402242877737278
+average vert of  r_lowerleg  to nearest pc point error: 0.05496712373099116
+average vert of  l_upperleg  to nearest pc point error: 0.024123460705560106
+average vert of  r_upperleg  to nearest pc point error: 0.05737578173257413
+average vert of  l_forearm  to nearest pc point error: 0.04630283185215111
+average vert of  r_forearm  to nearest pc point error: 0.10496471384686126
+average vert of  l_upperarm  to nearest pc point error: 0.08595896357399523
+average vert of  r_upperarm  to nearest pc point error: 0.17965776805598765
+average vert of  head  to nearest pc point error: 0.035637721136285924
+average vert of  torso  to nearest pc point error: 0.04658572877518521
+average pc point to nearest vert error: 0.052851518634321755
+adding to mesh 0
+adding to gt 33
+Precision is: 0.7318041464490516
+Recall is: 0.728270412642669
+Average error from overlapping: 0.08285450572634116
+Average error: 0.18063691094941095
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  215.12265 max:  143.62798   sum:  276028.2   sum:  82022.81   sum:  81738.125 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  294.1799 max:  100.0 max:  215.12265 max:  143.62798   sum:  276028.2   sum:  0.0   sum:  152227.28   sum:  235157.94   sum:  82022.81   sum:  81738.125 
+-0.05902529 1.5489333
+0.24374254 1.0384066
+-0.2755765 0.22082509
+got here
+average vert to nearest pc point error: 0.05881658281396033
+average vert of  l_lowerleg  to nearest pc point error: 0.052695259675781495
+average vert of  r_lowerleg  to nearest pc point error: 0.07312280644839478
+average vert of  l_upperleg  to nearest pc point error: 0.045250448362388625
+average vert of  r_upperleg  to nearest pc point error: 0.025488356557331865
+average vert of  l_forearm  to nearest pc point error: 0.140519320070129
+average vert of  r_forearm  to nearest pc point error: 0.10865530403331301
+average vert of  l_upperarm  to nearest pc point error: 0.1355248442681701
+average vert of  r_upperarm  to nearest pc point error: 0.0418406055315306
+average vert of  head  to nearest pc point error: 0.038970511764059856
+average vert of  torso  to nearest pc point error: 0.05864557337985836
+average pc point to nearest vert error: 0.0560358145814727
+adding to mesh 0
+adding to gt 30
+Precision is: 0.7591493570722058
+Recall is: 0.7025171624713958
+Average error from overlapping: 0.08531514657980456
+Average error: 0.17135689558383235
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  175.60667 max:  125.06483   sum:  311147.8   sum:  81906.16   sum:  81850.6 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  368.89822 max:  100.0 max:  175.60667 max:  125.06483   sum:  311147.8   sum:  0.0   sum:  308440.94   sum:  346267.5   sum:  81906.16   sum:  81850.6 
+0.009414177 1.6258576
+0.1996272 0.79296374
+-0.23947287 0.32908806
+got here
+average vert to nearest pc point error: 0.06434399606523564
+average vert of  l_lowerleg  to nearest pc point error: 0.05582756830271376
+average vert of  r_lowerleg  to nearest pc point error: 0.0444107142267894
+average vert of  l_upperleg  to nearest pc point error: 0.057836275620645146
+average vert of  r_upperleg  to nearest pc point error: 0.04783176570920092
+average vert of  l_forearm  to nearest pc point error: 0.18810464399124546
+average vert of  r_forearm  to nearest pc point error: 0.0637206897825768
+average vert of  l_upperarm  to nearest pc point error: 0.19829316802435554
+average vert of  r_upperarm  to nearest pc point error: 0.12344365900468166
+average vert of  head  to nearest pc point error: 0.04204789762271491
+average vert of  torso  to nearest pc point error: 0.04669989991773872
+average pc point to nearest vert error: 0.05509486962833317
+adding to mesh 0
+adding to gt 56
+Precision is: 0.7660981552384267
+Recall is: 0.7271225635943178
+Average error from overlapping: 0.06567469332121763
+Average error: 0.1967822384428224
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  185.78569 max:  108.96427   sum:  329221.1   sum:  82117.06   sum:  82061.16 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  170.19269 max:  100.0 max:  185.78569 max:  108.96427   sum:  329221.1   sum:  0.0   sum:  169452.34   sum:  295744.47   sum:  82117.06   sum:  82061.16 
+0.075230405 1.6750845
+-0.17805567 1.0521073
+-0.24863699 0.17643508
+got here
+average vert to nearest pc point error: 0.038005846998960216
+average vert of  l_lowerleg  to nearest pc point error: 0.03531042756484185
+average vert of  r_lowerleg  to nearest pc point error: 0.040271090807527575
+average vert of  l_upperleg  to nearest pc point error: 0.04032418373410809
+average vert of  r_upperleg  to nearest pc point error: 0.0550813373222241
+average vert of  l_forearm  to nearest pc point error: 0.08799029653573709
+average vert of  r_forearm  to nearest pc point error: 0.05857545641041555
+average vert of  l_upperarm  to nearest pc point error: 0.028641547625593344
+average vert of  r_upperarm  to nearest pc point error: 0.040915433091028394
+average vert of  head  to nearest pc point error: 0.040228379286759035
+average vert of  torso  to nearest pc point error: 0.02883937394841182
+average pc point to nearest vert error: 0.041562614813589374
+adding to mesh 0
+adding to gt 23
+Precision is: 0.8163265306122449
+Recall is: 0.6779661016949152
+Average error from overlapping: 0.047161458333333336
+Average error: 0.12599336793540947
+height_in 67.0
+gender m
+weight_lbs 130.0
+prescribed_pose_type ['hbh', 'hbh', 'supine_plo', 'sl', 'phu', 'sl', 'rollpi_plo', 'supine', 'rollpi_plo', 'rollpi', 'sl', 'rollpi', 'rollpi', 'phu', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'sl', 'rollpi', 'rollpi_plo', 'phu', 'rollpi_plo', 'xl', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi_plo', 'supine', 'xl', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'xl', 'rollpi_plo', 'phu', 'rollpi', 'xl', 'hbh', 'supine', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S141
+height_in 67.0
+gender m
+weight_lbs 130.0
+prescribed_pose_type ['hbh', 'hbh', 'supine_plo', 'sl', 'phu', 'sl', 'rollpi_plo', 'supine', 'rollpi_plo', 'rollpi', 'sl', 'rollpi', 'rollpi', 'phu', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'sl', 'rollpi', 'rollpi_plo', 'phu', 'rollpi_plo', 'xl', 'supine_plo', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi_plo', 'supine', 'xl', 'rollpi', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'xl', 'rollpi_plo', 'phu', 'rollpi', 'xl', 'hbh', 'supine', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  348.75656 max:  233.64465   sum:  289788.5   sum:  82150.3   sum:  82136.3 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  156.94771 max:  100.0 max:  348.75656 max:  233.64465   sum:  289788.5   sum:  0.0   sum:  176979.45   sum:  299235.88   sum:  82150.3   sum:  82136.3 
+0.020703 1.712602
+-0.08523743 0.7488893
+-0.20782587 0.15469795
+got here
+average vert to nearest pc point error: 0.029740051474696452
+average vert of  l_lowerleg  to nearest pc point error: 0.03995301234172592
+average vert of  r_lowerleg  to nearest pc point error: 0.03232562114115941
+average vert of  l_upperleg  to nearest pc point error: 0.02289779916938931
+average vert of  r_upperleg  to nearest pc point error: 0.026478803686612748
+average vert of  l_forearm  to nearest pc point error: 0.07992898230802317
+average vert of  r_forearm  to nearest pc point error: 0.032474162217552886
+average vert of  l_upperarm  to nearest pc point error: 0.010718800270728742
+average vert of  r_upperarm  to nearest pc point error: 0.02825746080008654
+average vert of  head  to nearest pc point error: 0.018965794359887315
+average vert of  torso  to nearest pc point error: 0.022915493816735525
+average pc point to nearest vert error: 0.03227222191490431
+adding to mesh 0
+adding to gt 19
+Precision is: 0.8631221719457014
+Recall is: 0.7642737896494157
+Average error from overlapping: 0.03696155526430756
+Average error: 0.08891248511018464
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  371.62784 max:  224.60283   sum:  309607.5   sum:  82151.234   sum:  82149.57 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  161.06819 max:  100.0 max:  371.62784 max:  224.60283   sum:  309607.5   sum:  0.0   sum:  192831.55   sum:  316205.25   sum:  82151.234   sum:  82149.57 
+0.056155276 1.7192762
+0.0034828894 0.8281685
+-0.22907314 0.15857516
+got here
+average vert to nearest pc point error: 0.03115122466321291
+average vert of  l_lowerleg  to nearest pc point error: 0.027772937090268065
+average vert of  r_lowerleg  to nearest pc point error: 0.02825236668524565
+average vert of  l_upperleg  to nearest pc point error: 0.016766501078628385
+average vert of  r_upperleg  to nearest pc point error: 0.03183554467350928
+average vert of  l_forearm  to nearest pc point error: 0.11192397825153685
+average vert of  r_forearm  to nearest pc point error: 0.05609142325083271
+average vert of  l_upperarm  to nearest pc point error: 0.018681492777166638
+average vert of  r_upperarm  to nearest pc point error: 0.03049692748691693
+average vert of  head  to nearest pc point error: 0.019203178715592812
+average vert of  torso  to nearest pc point error: 0.024919336349100207
+average pc point to nearest vert error: 0.03298843828064378
+adding to mesh 0
+adding to gt 21
+Precision is: 0.8331441543700341
+Recall is: 0.7389261744966443
+Average error from overlapping: 0.034209525431425976
+Average error: 0.09326841566793335
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  319.30478 max:  176.25948   sum:  225505.16   sum:  82151.24   sum:  82151.24 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  330.67212 max:  100.0 max:  319.30478 max:  176.25948   sum:  225505.16   sum:  0.0   sum:  227321.72   sum:  290096.56   sum:  82151.24   sum:  82151.24 
+0.17240329 1.8235847
+-0.17734204 0.5509416
+-0.24000236 0.31206182
+got here
+average vert to nearest pc point error: 0.05317906774833818
+average vert of  l_lowerleg  to nearest pc point error: 0.045284534081063234
+average vert of  r_lowerleg  to nearest pc point error: 0.0748623342008687
+average vert of  l_upperleg  to nearest pc point error: 0.03931250984181105
+average vert of  r_upperleg  to nearest pc point error: 0.044608525922256434
+average vert of  l_forearm  to nearest pc point error: 0.056062386211609444
+average vert of  r_forearm  to nearest pc point error: 0.192852162150129
+average vert of  l_upperarm  to nearest pc point error: 0.04465906622249791
+average vert of  r_upperarm  to nearest pc point error: 0.19182060371933907
+average vert of  head  to nearest pc point error: 0.0316505727515645
+average vert of  torso  to nearest pc point error: 0.03009686643745342
+average pc point to nearest vert error: 0.04247373845349852
+adding to mesh 0
+adding to gt 51
+Precision is: 0.6811311555338859
+Recall is: 0.7260914760914761
+Average error from overlapping: 0.056136811023622044
+Average error: 0.19963586113266096
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  564.2926 max:  281.4666   sum:  223451.38   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  262.8498 max:  100.0 max:  564.2926 max:  281.4666   sum:  223451.38   sum:  0.0   sum:  211966.62   sum:  276438.94   sum:  82151.24   sum:  82151.234 
+0.23290826 1.760336
+0.07438113 0.8617587
+-0.21137801 0.20254144
+got here
+average vert to nearest pc point error: 0.05306911087185781
+average vert of  l_lowerleg  to nearest pc point error: 0.06396126432722024
+average vert of  r_lowerleg  to nearest pc point error: 0.05382507476106008
+average vert of  l_upperleg  to nearest pc point error: 0.043601751000394685
+average vert of  r_upperleg  to nearest pc point error: 0.03526991789038587
+average vert of  l_forearm  to nearest pc point error: 0.16727207425234308
+average vert of  r_forearm  to nearest pc point error: 0.09851885525939467
+average vert of  l_upperarm  to nearest pc point error: 0.08889137309394685
+average vert of  r_upperarm  to nearest pc point error: 0.026101417302397005
+average vert of  head  to nearest pc point error: 0.035956325215983374
+average vert of  torso  to nearest pc point error: 0.03787978532056072
+average pc point to nearest vert error: 0.04629473284425135
+adding to mesh 0
+adding to gt 26
+Precision is: 0.6420552677029361
+Recall is: 0.7278511992168379
+Average error from overlapping: 0.0616013786146604
+Average error: 0.16451122910863508
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  351.6403 max:  159.44272   sum:  260111.38   sum:  81300.266   sum:  81725.25 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  226.12747 max:  100.0 max:  351.6403 max:  159.44272   sum:  260111.38   sum:  0.0   sum:  228624.84   sum:  355817.56   sum:  81300.266   sum:  81725.25 
+0.0082401745 1.7573766
+0.042352688 1.1149143
+-0.23123893 0.29317233
+got here
+average vert to nearest pc point error: 0.05836652574954182
+average vert of  l_lowerleg  to nearest pc point error: 0.06089307452431358
+average vert of  r_lowerleg  to nearest pc point error: 0.13069287128805068
+average vert of  l_upperleg  to nearest pc point error: 0.03633587856090526
+average vert of  r_upperleg  to nearest pc point error: 0.038163615688968214
+average vert of  l_forearm  to nearest pc point error: 0.14689135216982127
+average vert of  r_forearm  to nearest pc point error: NULL appending 0
+average vert of  l_upperarm  to nearest pc point error: 0.03748203566562627
+average vert of  r_upperarm  to nearest pc point error: 0.07579579190018759
+average vert of  head  to nearest pc point error: 0.02851897548979807
+average vert of  torso  to nearest pc point error: 0.035712204725073034
+average pc point to nearest vert error: 0.05423095752694928
+adding to mesh 0
+adding to gt 48
+Precision is: 0.719260065288357
+Recall is: 0.6715204876396884
+Average error from overlapping: 0.05959184316691881
+Average error: 0.1872155889455326
+height_in 64.0
+gender m
+weight_lbs 160.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'phu', 'phu', 'sl', 'xl', 'sl', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi', 'rollpi', 'phu', 'rollpi_plo', 'hbh', 'hbh', 'rollpi_plo', 'supine_plo', 'rollpi', 'hbh', 'supine', 'supine_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi_plo', 'rollpi', 'sl', 'supine', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'supine_plo', 'rollpi', 'xl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi', 'supine_plo', 'rollpi', 'xl', 'rollpi', 'rollpi_plo', 'rollpi', 'phu', 'rollpi']
+p_select_pose_type ['supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S145
+height_in 64.0
+gender m
+weight_lbs 160.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'phu', 'phu', 'sl', 'xl', 'sl', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi', 'rollpi', 'phu', 'rollpi_plo', 'hbh', 'hbh', 'rollpi_plo', 'supine_plo', 'rollpi', 'hbh', 'supine', 'supine_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi_plo', 'rollpi', 'sl', 'supine', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'supine_plo', 'rollpi', 'xl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi', 'supine_plo', 'rollpi', 'xl', 'rollpi', 'rollpi_plo', 'rollpi', 'phu', 'rollpi']
+p_select_pose_type ['supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  194.39963 max:  138.48267   sum:  322135.56   sum:  81913.45   sum:  81846.445 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  191.14381 max:  100.0 max:  194.39963 max:  138.48267   sum:  322135.56   sum:  0.0   sum:  259541.44   sum:  340619.56   sum:  81913.45   sum:  81846.445 
+0.0144051425 1.7381595
+-0.084373534 1.150929
+-0.2287482 0.21491438
+got here
+average vert to nearest pc point error: 0.03315567208687335
+average vert of  l_lowerleg  to nearest pc point error: 0.026633566641236506
+average vert of  r_lowerleg  to nearest pc point error: 0.03845284578403505
+average vert of  l_upperleg  to nearest pc point error: 0.02301390469254242
+average vert of  r_upperleg  to nearest pc point error: 0.025275812861215687
+average vert of  l_forearm  to nearest pc point error: NULL appending 0
+average vert of  r_forearm  to nearest pc point error: 0.06750684549723225
+average vert of  l_upperarm  to nearest pc point error: 0.06390681441853582
+average vert of  r_upperarm  to nearest pc point error: 0.03748405874798023
+average vert of  head  to nearest pc point error: 0.030729895855761094
+average vert of  torso  to nearest pc point error: 0.030530026298772408
+average pc point to nearest vert error: 0.042858826674825795
+adding to mesh 0
+adding to gt 30
+Precision is: 0.8769497400346621
+Recall is: 0.7474150664697193
+Average error from overlapping: 0.041653409090909095
+Average error: 0.10606834893048128
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  214.06789 max:  154.34435   sum:  258365.66   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  263.33575 max:  100.0 max:  214.06789 max:  154.34435   sum:  258365.66   sum:  0.0   sum:  281273.5   sum:  340927.66   sum:  82151.24   sum:  82151.234 
+0.1358939 1.752374
+0.016937088 0.66759634
+-0.20943145 0.2544205
+got here
+average vert to nearest pc point error: 0.0643132277569218
+average vert of  l_lowerleg  to nearest pc point error: 0.10326418077905769
+average vert of  r_lowerleg  to nearest pc point error: 0.06398062607955435
+average vert of  l_upperleg  to nearest pc point error: 0.035804690891399905
+average vert of  r_upperleg  to nearest pc point error: 0.056646837037745895
+average vert of  l_forearm  to nearest pc point error: 0.10703838410783882
+average vert of  r_forearm  to nearest pc point error: 0.10209847192763274
+average vert of  l_upperarm  to nearest pc point error: 0.08460425686058708
+average vert of  r_upperarm  to nearest pc point error: 0.12949529698928647
+average vert of  head  to nearest pc point error: 0.04714033961122946
+average vert of  torso  to nearest pc point error: 0.04371623473273369
+average pc point to nearest vert error: 0.05632616692799058
+adding to mesh 0
+adding to gt 39
+Precision is: 0.7287191726332538
+Recall is: 0.8592870544090057
+Average error from overlapping: 0.08046806768558952
+Average error: 0.1586573827292111
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  306.1729 max:  188.99161   sum:  263705.5   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  250.77196 max:  100.0 max:  306.1729 max:  188.99161   sum:  263705.5   sum:  0.0   sum:  214928.19   sum:  279314.2   sum:  82151.24   sum:  82151.234 
+0.034896623 1.7974225
+0.17880775 0.98338985
+-0.23958734 0.18024059
+got here
+average vert to nearest pc point error: 0.05419773263952629
+average vert of  l_lowerleg  to nearest pc point error: 0.03589366952100789
+average vert of  r_lowerleg  to nearest pc point error: 0.08089057728552557
+average vert of  l_upperleg  to nearest pc point error: 0.054739613381946106
+average vert of  r_upperleg  to nearest pc point error: 0.03748757016603368
+average vert of  l_forearm  to nearest pc point error: 0.08169185901409065
+average vert of  r_forearm  to nearest pc point error: 0.14381310128093003
+average vert of  l_upperarm  to nearest pc point error: 0.0729298517027131
+average vert of  r_upperarm  to nearest pc point error: 0.04395250034629513
+average vert of  head  to nearest pc point error: 0.03097699828155645
+average vert of  torso  to nearest pc point error: 0.04595017101090068
+average pc point to nearest vert error: 0.04887325610431102
+adding to mesh 0
+adding to gt 22
+Precision is: 0.7221261884183232
+Recall is: 0.7466487935656837
+Average error from overlapping: 0.06896730999401557
+Average error: 0.14300807011454356
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  187.43675 max:  118.855644   sum:  327064.62   sum:  82151.2   sum:  82140.93 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  213.1447 max:  100.0 max:  187.43675 max:  118.855644   sum:  327064.62   sum:  0.0   sum:  250345.62   sum:  353250.34   sum:  82151.2   sum:  82140.93 
+0.32578838 1.7456726
+0.017284166 0.8704001
+-0.2947987 0.23983055
+got here
+average vert to nearest pc point error: 0.06182677732287814
+average vert of  l_lowerleg  to nearest pc point error: 0.1001396628311038
+average vert of  r_lowerleg  to nearest pc point error: 0.11889670834396505
+average vert of  l_upperleg  to nearest pc point error: 0.08919734108605279
+average vert of  r_upperleg  to nearest pc point error: 0.09280803156042411
+average vert of  l_forearm  to nearest pc point error: 0.07837497240869769
+average vert of  r_forearm  to nearest pc point error: 0.06491026965236163
+average vert of  l_upperarm  to nearest pc point error: 0.02529262601358689
+average vert of  r_upperarm  to nearest pc point error: 0.04884197844562422
+average vert of  head  to nearest pc point error: 0.01839295660234502
+average vert of  torso  to nearest pc point error: 0.03417157139287042
+average pc point to nearest vert error: 0.06664897497195234
+adding to mesh 0
+adding to gt 36
+Precision is: 0.8428421421071054
+Recall is: 0.7067801584972117
+Average error from overlapping: 0.07681789867109634
+Average error: 0.14624821706431534
+height_in 67.0
+gender f
+weight_lbs 140.0
+prescribed_pose_type ['sl', 'hbh', 'rollpi', 'rollpi_plo', 'sl', 'rollpi', 'rollpi', 'hbh', 'sl', 'xl', 'xl', 'rollpi_plo', 'rollpi_plo', 'phu', 'xl', 'rollpi_plo', 'phu', 'rollpi_plo', 'rollpi_plo', 'supine', 'hbh', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo', 'phu', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'sl', 'supine_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'xl', 'phu', 'supine', 'supine', 'rollpi', 'supine_plo', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S151
+height_in 67.0
+gender f
+weight_lbs 140.0
+prescribed_pose_type ['sl', 'hbh', 'rollpi', 'rollpi_plo', 'sl', 'rollpi', 'rollpi', 'hbh', 'sl', 'xl', 'xl', 'rollpi_plo', 'rollpi_plo', 'phu', 'xl', 'rollpi_plo', 'phu', 'rollpi_plo', 'rollpi_plo', 'supine', 'hbh', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo', 'phu', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'sl', 'supine_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'xl', 'phu', 'supine', 'supine', 'rollpi', 'supine_plo', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  266.44113 max:  144.15178   sum:  308477.9   sum:  81814.01   sum:  81585.49 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  152.58194 max:  100.0 max:  266.44113 max:  144.15178   sum:  308477.9   sum:  0.0   sum:  176137.39   sum:  336614.7   sum:  81814.01   sum:  81585.49 
+0.17952003 1.8895124
+-0.12176187 0.81655324
+-0.16742462 0.1498724
+got here
+average vert to nearest pc point error: 0.038218420204304084
+average vert of  l_lowerleg  to nearest pc point error: 0.019213626206613807
+average vert of  r_lowerleg  to nearest pc point error: 0.024416202471110707
+average vert of  l_upperleg  to nearest pc point error: 0.027757055599555817
+average vert of  r_upperleg  to nearest pc point error: 0.030946593408345487
+average vert of  l_forearm  to nearest pc point error: 0.16240119550670834
+average vert of  r_forearm  to nearest pc point error: 0.04167021184257165
+average vert of  l_upperarm  to nearest pc point error: 0.03971888476558072
+average vert of  r_upperarm  to nearest pc point error: 0.0788745890870105
+average vert of  head  to nearest pc point error: 0.0279069169895794
+average vert of  torso  to nearest pc point error: 0.034460437076714895
+average pc point to nearest vert error: 0.03879160177409622
+adding to mesh 0
+adding to gt 21
+Precision is: 0.8525925925925926
+Recall is: 0.7061349693251534
+Average error from overlapping: 0.04121687662901825
+Average error: 0.09830730590486605
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  249.9657 max:  163.31245   sum:  282086.8   sum:  82151.23   sum:  82144.01 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  157.69812 max:  100.0 max:  249.9657 max:  163.31245   sum:  282086.8   sum:  0.0   sum:  151909.97   sum:  318438.75   sum:  82151.23   sum:  82144.01 
+0.107803926 1.7692126
+0.0056808405 0.69038934
+-0.23485371 0.15209542
+got here
+average vert to nearest pc point error: 0.0425486303182052
+average vert of  l_lowerleg  to nearest pc point error: 0.03241480909337074
+average vert of  r_lowerleg  to nearest pc point error: 0.03444752150218727
+average vert of  l_upperleg  to nearest pc point error: 0.033302337143429964
+average vert of  r_upperleg  to nearest pc point error: 0.04445454114360359
+average vert of  l_forearm  to nearest pc point error: 0.14089615969892158
+average vert of  r_forearm  to nearest pc point error: 0.05046911842698623
+average vert of  l_upperarm  to nearest pc point error: 0.027701676162934542
+average vert of  r_upperarm  to nearest pc point error: 0.0521666243293445
+average vert of  head  to nearest pc point error: 0.0263619133266502
+average vert of  torso  to nearest pc point error: 0.037745483576786885
+average pc point to nearest vert error: 0.04590121249704969
+adding to mesh 0
+adding to gt 22
+Precision is: 0.846123417721519
+Recall is: 0.6501519756838906
+Average error from overlapping: 0.05170640486208509
+Average error: 0.11830541587387877
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  313.123 max:  218.5819   sum:  242756.92   sum:  82151.24   sum:  82151.234 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  210.40485 max:  100.0 max:  313.123 max:  218.5819   sum:  242756.92   sum:  0.0   sum:  174733.64   sum:  291431.5   sum:  82151.24   sum:  82151.234 
+0.1289313 1.8107575
+-0.1340541 0.6407238
+-0.20446064 0.17900921
+got here
+average vert to nearest pc point error: 0.06576496234580023
+average vert of  l_lowerleg  to nearest pc point error: 0.12733315743713639
+average vert of  r_lowerleg  to nearest pc point error: 0.030208390168086373
+average vert of  l_upperleg  to nearest pc point error: 0.04443850608381493
+average vert of  r_upperleg  to nearest pc point error: 0.05300622557496302
+average vert of  l_forearm  to nearest pc point error: 0.054212119190043845
+average vert of  r_forearm  to nearest pc point error: 0.09721773201184838
+average vert of  l_upperarm  to nearest pc point error: 0.04358115487704578
+average vert of  r_upperarm  to nearest pc point error: 0.17122214954057732
+average vert of  head  to nearest pc point error: 0.04853010702578894
+average vert of  torso  to nearest pc point error: 0.06323716041386492
+average pc point to nearest vert error: 0.061857549983041105
+adding to mesh 0
+adding to gt 24
+Precision is: 0.6749875187219171
+Recall is: 0.678714859437751
+Average error from overlapping: 0.08665218195266272
+Average error: 0.16704857169882711
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  334.0973 max:  215.47086   sum:  251588.19   sum:  82127.375   sum:  81982.09 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  321.53973 max:  100.0 max:  334.0973 max:  215.47086   sum:  251588.19   sum:  0.0   sum:  171023.48   sum:  244502.62   sum:  82127.375   sum:  81982.09 
+0.01423509 1.712051
+0.18463336 1.0504652
+-0.18897824 0.28210986
+got here
+average vert to nearest pc point error: 0.06140648603569388
+average vert of  l_lowerleg  to nearest pc point error: 0.03404619858753336
+average vert of  r_lowerleg  to nearest pc point error: 0.05153934691239063
+average vert of  l_upperleg  to nearest pc point error: 0.05618768565968291
+average vert of  r_upperleg  to nearest pc point error: 0.04857638554738431
+average vert of  l_forearm  to nearest pc point error: 0.2102236506947253
+average vert of  r_forearm  to nearest pc point error: 0.0862787750732112
+average vert of  l_upperarm  to nearest pc point error: 0.1939252205230385
+average vert of  r_upperarm  to nearest pc point error: 0.03523462967559199
+average vert of  head  to nearest pc point error: 0.042368805677248024
+average vert of  torso  to nearest pc point error: 0.06513846271770454
+average pc point to nearest vert error: 0.05933601332795986
+adding to mesh 0
+adding to gt 43
+Precision is: 0.7373530914665304
+Recall is: 0.7039024390243902
+Average error from overlapping: 0.08569386694386695
+Average error: 0.20476355304212168
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  252.53386 max:  146.16039   sum:  297490.2   sum:  81860.39   sum:  81915.99 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  192.39935 max:  100.0 max:  252.53386 max:  146.16039   sum:  297490.2   sum:  0.0   sum:  212138.12   sum:  321519.4   sum:  81860.39   sum:  81915.99 
+0.1400388 1.861241
+0.20193698 0.830572
+-0.23732069 0.15855145
+got here
+average vert to nearest pc point error: 0.05498946876095401
+average vert of  l_lowerleg  to nearest pc point error: 0.028421231287873897
+average vert of  r_lowerleg  to nearest pc point error: 0.10114317663403868
+average vert of  l_upperleg  to nearest pc point error: 0.034889691606402234
+average vert of  r_upperleg  to nearest pc point error: 0.04126904440114572
+average vert of  l_forearm  to nearest pc point error: 0.07949106813949373
+average vert of  r_forearm  to nearest pc point error: 0.05459085593534573
+average vert of  l_upperarm  to nearest pc point error: 0.06959119646210526
+average vert of  r_upperarm  to nearest pc point error: 0.11013887969423677
+average vert of  head  to nearest pc point error: 0.04439445084872105
+average vert of  torso  to nearest pc point error: 0.04824806275070543
+average pc point to nearest vert error: 0.05677500077109893
+adding to mesh 0
+adding to gt 21
+Precision is: 0.7424354243542436
+Recall is: 0.6250388319353837
+Average error from overlapping: 0.061651652584493045
+Average error: 0.14287050038294613
+height_in 70.0
+gender m
+weight_lbs 120.0
+prescribed_pose_type ['rollpi_plo', 'xl', 'phu', 'sl', 'sl', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'phu', 'hbh', 'sl', 'rollpi', 'rollpi', 'sl', 'rollpi', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi', 'supine_plo', 'supine', 'hbh', 'supine', 'xl', 'rollpi_plo', 'xl', 'rollpi', 'rollpi_plo', 'supine', 'supine_plo', 'supine', 'hbh', 'rollpi', 'supine_plo', 'rollpi', 'phu', 'rollpi_plo', 'supine_plo', 'xl', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S163
+height_in 70.0
+gender m
+weight_lbs 120.0
+prescribed_pose_type ['rollpi_plo', 'xl', 'phu', 'sl', 'sl', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'phu', 'hbh', 'sl', 'rollpi', 'rollpi', 'sl', 'rollpi', 'rollpi_plo', 'rollpi', 'hbh', 'rollpi', 'supine_plo', 'supine', 'hbh', 'supine', 'xl', 'rollpi_plo', 'xl', 'rollpi', 'rollpi_plo', 'supine', 'supine_plo', 'supine', 'hbh', 'rollpi', 'supine_plo', 'rollpi', 'phu', 'rollpi_plo', 'supine_plo', 'xl', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  407.69885 max:  191.71913   sum:  316898.44   sum:  82151.17   sum:  82130.68 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  151.58417 max:  100.0 max:  407.69885 max:  191.71913   sum:  316898.44   sum:  0.0   sum:  148560.25   sum:  310223.62   sum:  82151.17   sum:  82130.68 
+-0.00994863 1.8288568
+-0.11181557 0.8448
+-0.2295382 0.16217801
+got here
+average vert to nearest pc point error: 0.03416945311185065
+average vert of  l_lowerleg  to nearest pc point error: 0.029281572424919043
+average vert of  r_lowerleg  to nearest pc point error: 0.03236972809812659
+average vert of  l_upperleg  to nearest pc point error: 0.022543342215847997
+average vert of  r_upperleg  to nearest pc point error: 0.033007219244630064
+average vert of  l_forearm  to nearest pc point error: 0.14082803951401096
+average vert of  r_forearm  to nearest pc point error: 0.14839529623167697
+average vert of  l_upperarm  to nearest pc point error: 0.021897330999556115
+average vert of  r_upperarm  to nearest pc point error: 0.02442124913184545
+average vert of  head  to nearest pc point error: 0.026428997123015385
+average vert of  torso  to nearest pc point error: 0.015252394964993395
+average pc point to nearest vert error: 0.030402624193614336
+adding to mesh 0
+adding to gt 21
+Precision is: 0.7945984363894811
+Recall is: 0.8130909090909091
+Average error from overlapping: 0.03314205053667263
+Average error: 0.091962890625
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  362.18604 max:  204.86285   sum:  259597.9   sum:  81915.57   sum:  81966.69 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  149.33575 max:  100.0 max:  362.18604 max:  204.86285   sum:  259597.9   sum:  0.0   sum:  148834.44   sum:  272434.06   sum:  81915.57   sum:  81966.69 
+0.02276991 1.7087424
+-0.116353914 0.9030812
+-0.30022162 0.15535864
+got here
+average vert to nearest pc point error: 0.056404013462008074
+average vert of  l_lowerleg  to nearest pc point error: 0.06582444781120107
+average vert of  r_lowerleg  to nearest pc point error: 0.05911685448269107
+average vert of  l_upperleg  to nearest pc point error: 0.08980898794768831
+average vert of  r_upperleg  to nearest pc point error: 0.0839601495645055
+average vert of  l_forearm  to nearest pc point error: 0.08487397629774328
+average vert of  r_forearm  to nearest pc point error: 0.1345238091561358
+average vert of  l_upperarm  to nearest pc point error: 0.029894334943134267
+average vert of  r_upperarm  to nearest pc point error: 0.04203943163352387
+average vert of  head  to nearest pc point error: 0.03736975592672834
+average vert of  torso  to nearest pc point error: 0.02486665887196536
+average pc point to nearest vert error: 0.048280857668434894
+adding to mesh 0
+adding to gt 20
+Precision is: 0.8328530259365994
+Recall is: 0.7528842575362859
+Average error from overlapping: 0.06490793376173999
+Average error: 0.10946067733591981
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  459.06268 max:  244.30208   sum:  238135.9   sum:  82088.59   sum:  81913.53 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  391.44882 max:  100.0 max:  459.06268 max:  244.30208   sum:  238135.9   sum:  0.0   sum:  351914.34   sum:  288761.62   sum:  82088.59   sum:  81913.53 
+0.10618545 1.7046002
+-0.025552202 0.70171994
+-0.25574166 0.31407523
+got here
+average vert to nearest pc point error: 0.05348640547070763
+average vert of  l_lowerleg  to nearest pc point error: 0.07263677826578563
+average vert of  r_lowerleg  to nearest pc point error: 0.02801622881057344
+average vert of  l_upperleg  to nearest pc point error: 0.023875367340835625
+average vert of  r_upperleg  to nearest pc point error: 0.042592114364399816
+average vert of  l_forearm  to nearest pc point error: 0.07356830212813799
+average vert of  r_forearm  to nearest pc point error: 0.13202988667238924
+average vert of  l_upperarm  to nearest pc point error: 0.07244904215829728
+average vert of  r_upperarm  to nearest pc point error: 0.1807631530247344
+average vert of  head  to nearest pc point error: 0.05223106107790217
+average vert of  torso  to nearest pc point error: 0.03447535939917818
+average pc point to nearest vert error: 0.05418985557719826
+adding to mesh 0
+adding to gt 49
+Precision is: 0.653289780681288
+Recall is: 0.6297795771479981
+Average error from overlapping: 0.052266517857142855
+Average error: 0.22065702966958867
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  470.9308 max:  260.41055   sum:  230331.53   sum:  81985.58   sum:  81993.34 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  332.7592 max:  100.0 max:  470.9308 max:  260.41055   sum:  230331.53   sum:  0.0   sum:  236103.7   sum:  267710.34   sum:  81985.58   sum:  81993.34 
+-0.044478837 1.6663922
+0.0682842 0.9230583
+-0.2725694 0.20588283
+got here
+average vert to nearest pc point error: 0.04732265918215162
+average vert of  l_lowerleg  to nearest pc point error: 0.023523504395344428
+average vert of  r_lowerleg  to nearest pc point error: 0.050077647432495404
+average vert of  l_upperleg  to nearest pc point error: 0.030730713691257728
+average vert of  r_upperleg  to nearest pc point error: 0.035734900248836465
+average vert of  l_forearm  to nearest pc point error: 0.11931062878557518
+average vert of  r_forearm  to nearest pc point error: 0.11163898687553538
+average vert of  l_upperarm  to nearest pc point error: 0.10943439308257227
+average vert of  r_upperarm  to nearest pc point error: 0.0441603150386897
+average vert of  head  to nearest pc point error: 0.04670227808126705
+average vert of  torso  to nearest pc point error: 0.034924411572812994
+average pc point to nearest vert error: 0.039535960362938785
+adding to mesh 0
+adding to gt 26
+Precision is: 0.6499787865931269
+Recall is: 0.7175644028103044
+Average error from overlapping: 0.05448596605744125
+Average error: 0.15585346283783785
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  402.04938 max:  214.65735   sum:  261446.33   sum:  81994.48   sum:  81953.28 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  322.9452 max:  100.0 max:  402.04938 max:  214.65735   sum:  261446.33   sum:  0.0   sum:  251597.42   sum:  337128.16   sum:  81994.48   sum:  81953.28 
+0.025980424 1.8396686
+0.18681921 0.7010013
+-0.1941255 0.2944356
+got here
+average vert to nearest pc point error: 0.057686042411787174
+average vert of  l_lowerleg  to nearest pc point error: 0.0530514613460486
+average vert of  r_lowerleg  to nearest pc point error: 0.03415017697609089
+average vert of  l_upperleg  to nearest pc point error: 0.031006396630448716
+average vert of  r_upperleg  to nearest pc point error: 0.03285461227045236
+average vert of  l_forearm  to nearest pc point error: 0.23121716519600724
+average vert of  r_forearm  to nearest pc point error: 0.14743455188539967
+average vert of  l_upperarm  to nearest pc point error: 0.16460564016002294
+average vert of  r_upperarm  to nearest pc point error: 0.023844460403803284
+average vert of  head  to nearest pc point error: 0.04587003424226468
+average vert of  torso  to nearest pc point error: 0.029877660085867615
+average pc point to nearest vert error: 0.04513850018789727
+adding to mesh 0
+adding to gt 48
+Precision is: 0.7679492264974217
+Recall is: 0.7122884473877852
+Average error from overlapping: 0.056539579028925625
+Average error: 0.16456214047835302
+height_in 78.0
+gender m
+weight_lbs 205.0
+prescribed_pose_type ['phu', 'hbh', 'xl', 'rollpi', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'sl', 'supine_plo', 'hbh', 'rollpi_plo', 'rollpi', 'rollpi', 'supine', 'xl', 'rollpi_plo', 'rollpi', 'phu', 'phu', 'rollpi_plo', 'phu', 'supine_plo', 'hbh', 'xl', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi_plo', 'rollpi', 'supine', 'rollpi', 'supine', 'rollpi', 'supine', 'supine_plo', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S165
+height_in 78.0
+gender m
+weight_lbs 205.0
+prescribed_pose_type ['phu', 'hbh', 'xl', 'rollpi', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'sl', 'supine_plo', 'hbh', 'rollpi_plo', 'rollpi', 'rollpi', 'supine', 'xl', 'rollpi_plo', 'rollpi', 'phu', 'phu', 'rollpi_plo', 'phu', 'supine_plo', 'hbh', 'xl', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi_plo', 'rollpi', 'supine', 'rollpi', 'supine', 'rollpi', 'supine', 'supine_plo', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  219.2407 max:  154.57257   sum:  381079.06   sum:  81448.47   sum:  81315.984 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  177.0 max:  100.0 max:  219.2407 max:  154.57257   sum:  381079.06   sum:  0.0   sum:  276572.4   sum:  389294.2   sum:  81448.47   sum:  81315.984 
+0.0837615 1.9357506
+-0.16792674 1.1642121
+-0.1813653 0.20271322
+got here
+average vert to nearest pc point error: 0.03305472933019091
+average vert of  l_lowerleg  to nearest pc point error: 0.03724855848593561
+average vert of  r_lowerleg  to nearest pc point error: 0.031066771332882995
+average vert of  l_upperleg  to nearest pc point error: 0.03591400573827373
+average vert of  r_upperleg  to nearest pc point error: 0.031432716598428855
+average vert of  l_forearm  to nearest pc point error: NULL appending 0
+average vert of  r_forearm  to nearest pc point error: 0.08307741061179878
+average vert of  l_upperarm  to nearest pc point error: 0.06648381459567491
+average vert of  r_upperarm  to nearest pc point error: 0.05912684671635079
+average vert of  head  to nearest pc point error: 0.026322219105860283
+average vert of  torso  to nearest pc point error: 0.022727268008517067
+average pc point to nearest vert error: 0.03996125167924492
+adding to mesh 0
+adding to gt 28
+Precision is: 0.8535825545171339
+Recall is: 0.7636566332218506
+Average error from overlapping: 0.040443202554744526
+Average error: 0.10564409807787088
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  131.70604 max:  77.87862   sum:  371631.7   sum:  81604.32   sum:  81457.74 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  173.65384 max:  100.0 max:  131.70604 max:  77.87862   sum:  371631.7   sum:  0.0   sum:  278873.7   sum:  405416.38   sum:  81604.32   sum:  81457.74 
+0.02069671 1.9869398
+-0.10303706 1.2416304
+-0.15901835 0.22853012
+got here
+average vert to nearest pc point error: 0.03814650626869278
+average vert of  l_lowerleg  to nearest pc point error: 0.03912479779895995
+average vert of  r_lowerleg  to nearest pc point error: 0.04768640823855913
+average vert of  l_upperleg  to nearest pc point error: 0.03733469189028294
+average vert of  r_upperleg  to nearest pc point error: 0.03474009016210932
+average vert of  l_forearm  to nearest pc point error: NULL appending 0
+average vert of  r_forearm  to nearest pc point error: 0.07938686204054236
+average vert of  l_upperarm  to nearest pc point error: 0.047027428895673025
+average vert of  r_upperarm  to nearest pc point error: 0.05009227497732695
+average vert of  head  to nearest pc point error: 0.04333761627482859
+average vert of  torso  to nearest pc point error: 0.026884437640053212
+average pc point to nearest vert error: 0.04653635018077583
+adding to mesh 0
+adding to gt 35
+Precision is: 0.7837837837837838
+Recall is: 0.7161487236403996
+Average error from overlapping: 0.04148053080201472
+Average error: 0.13686211190917516
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  231.751 max:  137.6579   sum:  314023.12   sum:  82132.45   sum:  82086.0 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  210.69247 max:  100.0 max:  231.751 max:  137.6579   sum:  314023.12   sum:  0.0   sum:  219484.5   sum:  309915.56   sum:  82132.45   sum:  82086.0 
+-0.0041250475 1.8930067
+-0.14770895 0.5420669
+-0.27837715 0.21609491
+got here
+average vert to nearest pc point error: 0.05805122850183182
+average vert of  l_lowerleg  to nearest pc point error: 0.06828450371468253
+average vert of  r_lowerleg  to nearest pc point error: 0.035823760568052504
+average vert of  l_upperleg  to nearest pc point error: 0.046154058527898834
+average vert of  r_upperleg  to nearest pc point error: 0.0639941036154902
+average vert of  l_forearm  to nearest pc point error: 0.04269569137295331
+average vert of  r_forearm  to nearest pc point error: 0.09787162337429871
+average vert of  l_upperarm  to nearest pc point error: 0.03562990700892348
+average vert of  r_upperarm  to nearest pc point error: 0.15295569652817997
+average vert of  head  to nearest pc point error: 0.05535925238165025
+average vert of  torso  to nearest pc point error: 0.05615341431902431
+average pc point to nearest vert error: 0.06894393480240943
+adding to mesh 0
+adding to gt 30
+Precision is: 0.7045646661031276
+Recall is: 0.6379640260237275
+Average error from overlapping: 0.08112252549490101
+Average error: 0.19077634359903384
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  213.26672 max:  130.10432   sum:  312482.8   sum:  81976.05   sum:  81853.836 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  285.95172 max:  100.0 max:  213.26672 max:  130.10432   sum:  312482.8   sum:  0.0   sum:  204721.92   sum:  268942.62   sum:  81976.05   sum:  81853.836 
+0.03779913 1.8810948
+0.23356314 0.96909297
+-0.26500225 0.29504043
+got here
+average vert to nearest pc point error: 0.06603685706022897
+average vert of  l_lowerleg  to nearest pc point error: 0.06808207727950341
+average vert of  r_lowerleg  to nearest pc point error: 0.029659949966883217
+average vert of  l_upperleg  to nearest pc point error: 0.06638340467657099
+average vert of  r_upperleg  to nearest pc point error: 0.05430466092845909
+average vert of  l_forearm  to nearest pc point error: 0.21186140307062595
+average vert of  r_forearm  to nearest pc point error: 0.15357596029455323
+average vert of  l_upperarm  to nearest pc point error: 0.13997112653935367
+average vert of  r_upperarm  to nearest pc point error: 0.07518644706544315
+average vert of  head  to nearest pc point error: 0.04547518064473818
+average vert of  torso  to nearest pc point error: 0.05268733869791073
+average pc point to nearest vert error: 0.057843781985435265
+adding to mesh 0
+adding to gt 42
+Precision is: 0.6924
+Recall is: 0.7285353535353535
+Average error from overlapping: 0.08685225303292894
+Average error: 0.209900039745628
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  257.3625 max:  198.07097   sum:  354688.0   sum:  82012.266   sum:  81716.89 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  181.98915 max:  100.0 max:  257.3625 max:  198.07097   sum:  354688.0   sum:  0.0   sum:  244847.67   sum:  332815.22   sum:  82012.266   sum:  81716.89 
+0.18427943 2.0274317
+-0.12798093 1.1186823
+-0.2091465 0.23737967
+got here
+average vert to nearest pc point error: 0.050667340633134564
+average vert of  l_lowerleg  to nearest pc point error: 0.03263121707962227
+average vert of  r_lowerleg  to nearest pc point error: 0.10617136345288052
+average vert of  l_upperleg  to nearest pc point error: 0.04017508930335066
+average vert of  r_upperleg  to nearest pc point error: 0.05387133217062139
+average vert of  l_forearm  to nearest pc point error: 0.02720853217941415
+average vert of  r_forearm  to nearest pc point error: NULL appending 0
+average vert of  l_upperarm  to nearest pc point error: 0.035182048205768895
+average vert of  r_upperarm  to nearest pc point error: 0.06624590127592922
+average vert of  head  to nearest pc point error: 0.05054178505433408
+average vert of  torso  to nearest pc point error: 0.04580888809067932
+average pc point to nearest vert error: 0.05515550913372475
+adding to mesh 0
+adding to gt 37
+Precision is: 0.8221538461538461
+Recall is: 0.7080021197668257
+Average error from overlapping: 0.06128882859281438
+Average error: 0.14941607306985294
+height_in 70.0
+gender m
+weight_lbs 159.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'rollpi', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'sl', 'sl', 'rollpi_plo', 'xl', 'phu', 'hbh', 'rollpi_plo', 'hbh', 'xl', 'supine', 'hbh', 'xl', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'sl', 'rollpi', 'phu', 'hbh', 'supine_plo', 'rollpi', 'xl', 'rollpi', 'supine', 'phu', 'rollpi_plo', 'rollpi', 'supine_plo', 'rollpi', 'supine', 'rollpi', 'rollpi', 'supine', 'supine_plo', 'rollpi_plo', 'rollpi', 'rollpi']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S170
+height_in 70.0
+gender m
+weight_lbs 159.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'rollpi', 'phu', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'sl', 'sl', 'rollpi_plo', 'xl', 'phu', 'hbh', 'rollpi_plo', 'hbh', 'xl', 'supine', 'hbh', 'xl', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'sl', 'rollpi', 'phu', 'hbh', 'supine_plo', 'rollpi', 'xl', 'rollpi', 'supine', 'phu', 'rollpi_plo', 'rollpi', 'supine_plo', 'rollpi', 'supine', 'rollpi', 'rollpi', 'supine', 'supine_plo', 'rollpi_plo', 'rollpi', 'rollpi']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  224.80629 max:  125.94676   sum:  351812.7   sum:  82126.875   sum:  81907.81 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  167.45952 max:  100.0 max:  224.80629 max:  125.94676   sum:  351812.7   sum:  0.0   sum:  222388.55   sum:  371529.0   sum:  82126.875   sum:  81907.81 
+0.003783565 1.8206578
+-0.08691126 0.8663522
+-0.15038887 0.18795115
+got here
+average vert to nearest pc point error: 0.03529476920359605
+average vert of  l_lowerleg  to nearest pc point error: 0.03627886957187458
+average vert of  r_lowerleg  to nearest pc point error: 0.041645679227352336
+average vert of  l_upperleg  to nearest pc point error: 0.03130600600209887
+average vert of  r_upperleg  to nearest pc point error: 0.031227554651884353
+average vert of  l_forearm  to nearest pc point error: 0.10832837623532776
+average vert of  r_forearm  to nearest pc point error: 0.08312007968038505
+average vert of  l_upperarm  to nearest pc point error: 0.03597874240833974
+average vert of  r_upperarm  to nearest pc point error: 0.028580348557556066
+average vert of  head  to nearest pc point error: 0.03369408812175459
+average vert of  torso  to nearest pc point error: 0.024391967035934027
+average pc point to nearest vert error: 0.03833028656017407
+adding to mesh 0
+adding to gt 25
+Precision is: 0.7698815566835872
+Recall is: 0.7151839044325684
+Average error from overlapping: 0.03647142857142857
+Average error: 0.11648763273763274
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  187.1375 max:  155.20224   sum:  278390.0   sum:  81171.195   sum:  81026.07 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  196.17412 max:  100.0 max:  187.1375 max:  155.20224   sum:  278390.0   sum:  0.0   sum:  280950.56   sum:  343007.1   sum:  81171.195   sum:  81026.07 
+0.0042899363 1.7251223
+-0.046028066 0.89310205
+-0.24562508 0.20713747
+got here
+average vert to nearest pc point error: 0.042744866468448155
+average vert of  l_lowerleg  to nearest pc point error: 0.045762322545149295
+average vert of  r_lowerleg  to nearest pc point error: 0.04276419699518304
+average vert of  l_upperleg  to nearest pc point error: 0.031043085622376183
+average vert of  r_upperleg  to nearest pc point error: 0.05169372376368886
+average vert of  l_forearm  to nearest pc point error: 0.11495474081453252
+average vert of  r_forearm  to nearest pc point error: 0.1371782813946386
+average vert of  l_upperarm  to nearest pc point error: 0.05030216381366556
+average vert of  r_upperarm  to nearest pc point error: 0.034739602677176976
+average vert of  head  to nearest pc point error: 0.03328154741124135
+average vert of  torso  to nearest pc point error: 0.025333960233863865
+average pc point to nearest vert error: 0.03963956989962767
+adding to mesh 0
+adding to gt 30
+Precision is: 0.7896075581395349
+Recall is: 0.7323896191439164
+Average error from overlapping: 0.0443140243902439
+Average error: 0.12752573322053018
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  419.75342 max:  216.48604   sum:  260316.75   sum:  82141.484   sum:  82143.79 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  259.73853 max:  100.0 max:  419.75342 max:  216.48604   sum:  260316.75   sum:  0.0   sum:  186745.17   sum:  297490.2   sum:  82141.484   sum:  82143.79 
+0.014362883 1.7558447
+-0.20820384 0.57204354
+-0.22810121 0.212905
+got here
+average vert to nearest pc point error: 0.04152795374661079
+average vert of  l_lowerleg  to nearest pc point error: 0.0647620803415692
+average vert of  r_lowerleg  to nearest pc point error: 0.04463989959858731
+average vert of  l_upperleg  to nearest pc point error: 0.01942565565024289
+average vert of  r_upperleg  to nearest pc point error: 0.04204832900591875
+average vert of  l_forearm  to nearest pc point error: 0.03857078134009637
+average vert of  r_forearm  to nearest pc point error: 0.0663750767210818
+average vert of  l_upperarm  to nearest pc point error: 0.02196462333416711
+average vert of  r_upperarm  to nearest pc point error: 0.12200029338845188
+average vert of  head  to nearest pc point error: 0.04054165884788146
+average vert of  torso  to nearest pc point error: 0.03232352978474152
+average pc point to nearest vert error: 0.03784187637909545
+adding to mesh 0
+adding to gt 28
+Precision is: 0.7752962625341842
+Recall is: 0.8053977272727273
+Average error from overlapping: 0.05958737507348619
+Average error: 0.1279285028790787
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  300.53595 max:  196.17621   sum:  245118.77   sum:  81364.31   sum:  81185.24 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  350.24246 max:  100.0 max:  300.53595 max:  196.17621   sum:  245118.77   sum:  0.0   sum:  167620.36   sum:  224991.7   sum:  81364.31   sum:  81185.24 
+0.0042666607 1.738078
+0.28477937 1.0811038
+-0.30559224 0.31256604
+got here
+average vert to nearest pc point error: 0.06262768469235591
+average vert of  l_lowerleg  to nearest pc point error: 0.06005695063286798
+average vert of  r_lowerleg  to nearest pc point error: 0.041054290145805195
+average vert of  l_upperleg  to nearest pc point error: 0.06848647357919295
+average vert of  r_upperleg  to nearest pc point error: 0.03195010246597525
+average vert of  l_forearm  to nearest pc point error: 0.22746280302477487
+average vert of  r_forearm  to nearest pc point error: 0.12980540555304534
+average vert of  l_upperarm  to nearest pc point error: 0.16220652132027297
+average vert of  r_upperarm  to nearest pc point error: 0.08466751145235576
+average vert of  head  to nearest pc point error: 0.06586088989396553
+average vert of  torso  to nearest pc point error: 0.051915587050676955
+average pc point to nearest vert error: 0.04886262111678945
+adding to mesh 0
+adding to gt 52
+Precision is: 0.7213114754098361
+Recall is: 0.7189542483660131
+Average error from overlapping: 0.07877394480519481
+Average error: 0.21718989769820973
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  249.20706 max:  137.30685   sum:  322032.88   sum:  81109.984   sum:  81447.81 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  173.01575 max:  100.0 max:  249.20706 max:  137.30685   sum:  322032.88   sum:  0.0   sum:  200587.66   sum:  326345.8   sum:  81109.984   sum:  81447.81 
+0.01617689 1.8745831
+0.031299096 1.0159497
+-0.33557352 0.40946534
+got here
+average vert to nearest pc point error: 0.06307483546928623
+average vert of  l_lowerleg  to nearest pc point error: 0.07829300085404188
+average vert of  r_lowerleg  to nearest pc point error: 0.024344529883177413
+average vert of  l_upperleg  to nearest pc point error: 0.04456584102776623
+average vert of  r_upperleg  to nearest pc point error: 0.019432021571686057
+average vert of  l_forearm  to nearest pc point error: 0.21781306718606694
+average vert of  r_forearm  to nearest pc point error: 0.19212741436605368
+average vert of  l_upperarm  to nearest pc point error: 0.05394991233066845
+average vert of  r_upperarm  to nearest pc point error: 0.19045260398444608
+average vert of  head  to nearest pc point error: 0.07488727697048667
+average vert of  torso  to nearest pc point error: 0.037209769421353275
+average pc point to nearest vert error: 0.05910977685915094
+adding to mesh 0
+adding to gt 71
+Precision is: 0.8782355085672621
+Recall is: 0.7302212791755077
+Average error from overlapping: 0.07317922374429224
+Average error: 0.19052625240847784
+height_in 68.0
+gender m
+weight_lbs 143.0
+prescribed_pose_type ['rollpi', 'xl', 'phu', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'sl', 'phu', 'rollpi', 'sl', 'sl', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi', 'supine', 'rollpi_plo', 'phu', 'hbh', 'sl', 'rollpi', 'xl', 'rollpi', 'rollpi', 'phu', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'xl', 'rollpi_plo', 'supine_plo', 'xl', 'hbh', 'rollpi', 'supine', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'supine', 'hbh', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'hbh', 'supine_plo', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S179
+height_in 68.0
+gender m
+weight_lbs 143.0
+prescribed_pose_type ['rollpi', 'xl', 'phu', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'sl', 'phu', 'rollpi', 'sl', 'sl', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'rollpi', 'supine', 'rollpi_plo', 'phu', 'hbh', 'sl', 'rollpi', 'xl', 'rollpi', 'rollpi', 'phu', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'xl', 'rollpi_plo', 'supine_plo', 'xl', 'hbh', 'rollpi', 'supine', 'rollpi_plo', 'rollpi', 'rollpi_plo', 'supine_plo', 'supine', 'hbh', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'hbh', 'supine_plo', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  250.001 max:  170.55345   sum:  328091.5   sum:  81722.42   sum:  81534.2 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  160.1903 max:  100.0 max:  250.001 max:  170.55345   sum:  328091.5   sum:  0.0   sum:  167863.73   sum:  308580.6   sum:  81722.42   sum:  81534.2 
+0.14547332 1.8875822
+-0.012120444 0.8624872
+-0.3283907 0.16306388
+got here
+average vert to nearest pc point error: 0.043943319290482015
+average vert of  l_lowerleg  to nearest pc point error: 0.019436145828931356
+average vert of  r_lowerleg  to nearest pc point error: 0.05645225915835972
+average vert of  l_upperleg  to nearest pc point error: 0.02381765332858569
+average vert of  r_upperleg  to nearest pc point error: 0.04617540346539334
+average vert of  l_forearm  to nearest pc point error: 0.15519572334430662
+average vert of  r_forearm  to nearest pc point error: 0.10998779429769555
+average vert of  l_upperarm  to nearest pc point error: 0.03467478654943708
+average vert of  r_upperarm  to nearest pc point error: 0.04793139166614796
+average vert of  head  to nearest pc point error: 0.045262320286530495
+average vert of  torso  to nearest pc point error: 0.02321799802249801
+average pc point to nearest vert error: 0.04377432176414414
+adding to mesh 0
+adding to gt 20
+Precision is: 0.807858687815429
+Recall is: 0.747498332221481
+Average error from overlapping: 0.0492394578313253
+Average error: 0.11472175021240441
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  259.70914 max:  145.1407   sum:  312277.4   sum:  81298.47   sum:  81415.93 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  158.75977 max:  100.0 max:  259.70914 max:  145.1407   sum:  312277.4   sum:  0.0   sum:  190591.9   sum:  315871.5   sum:  81298.47   sum:  81415.93 
+0.184658 1.9083012
+2.483651e-05 0.9481821
+-0.22643413 0.15764165
+got here
+average vert to nearest pc point error: 0.042943441143698906
+average vert of  l_lowerleg  to nearest pc point error: 0.047431524146973846
+average vert of  r_lowerleg  to nearest pc point error: 0.04187161082512067
+average vert of  l_upperleg  to nearest pc point error: 0.045191118422746236
+average vert of  r_upperleg  to nearest pc point error: 0.04984788738050762
+average vert of  l_forearm  to nearest pc point error: 0.04728509426139157
+average vert of  r_forearm  to nearest pc point error: 0.15513784755956794
+average vert of  l_upperarm  to nearest pc point error: 0.021764913128512347
+average vert of  r_upperarm  to nearest pc point error: 0.04745179265487511
+average vert of  head  to nearest pc point error: 0.019486545744545215
+average vert of  torso  to nearest pc point error: 0.023303745246524753
+average pc point to nearest vert error: 0.0415267212211529
+adding to mesh 0
+adding to gt 19
+Precision is: 0.8258725341426404
+Recall is: 0.716589861751152
+Average error from overlapping: 0.04592472439136427
+Average error: 0.10263457963969116
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  357.8669 max:  212.63115   sum:  249123.62   sum:  82067.266   sum:  82055.49 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  225.61417 max:  100.0 max:  357.8669 max:  212.63115   sum:  249123.62   sum:  0.0   sum:  179334.11   sum:  266067.3   sum:  82067.266   sum:  82055.49 
+0.18581732 1.896793
+-0.16532059 0.5455619
+-0.31957433 0.2229259
+got here
+average vert to nearest pc point error: 0.05846009189407891
+average vert of  l_lowerleg  to nearest pc point error: 0.07049760635192266
+average vert of  r_lowerleg  to nearest pc point error: 0.04888248172230908
+average vert of  l_upperleg  to nearest pc point error: 0.061462979689199816
+average vert of  r_upperleg  to nearest pc point error: 0.03655235121527895
+average vert of  l_forearm  to nearest pc point error: 0.13297591868388542
+average vert of  r_forearm  to nearest pc point error: 0.10124597207864315
+average vert of  l_upperarm  to nearest pc point error: 0.03590551009564038
+average vert of  r_upperarm  to nearest pc point error: 0.12914273331792386
+average vert of  head  to nearest pc point error: 0.057005799061135766
+average vert of  torso  to nearest pc point error: 0.04022460706726096
+average pc point to nearest vert error: 0.050647666325975206
+adding to mesh 0
+adding to gt 31
+Precision is: 0.7509968985378821
+Recall is: 0.6812700964630225
+Average error from overlapping: 0.09219579646017699
+Average error: 0.1860612704918033
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  273.98557 max:  173.7321   sum:  256106.5   sum:  81969.06   sum:  81949.8 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  175.09077 max:  100.0 max:  273.98557 max:  173.7321   sum:  256106.5   sum:  0.0   sum:  172550.47   sum:  265451.2   sum:  81969.06   sum:  81949.8 
+0.0735652 1.7956346
+0.16613822 1.0907453
+-0.25500703 0.17821299
+got here
+average vert to nearest pc point error: 0.04902244976361917
+average vert of  l_lowerleg  to nearest pc point error: 0.0823263083169851
+average vert of  r_lowerleg  to nearest pc point error: 0.06337065728783574
+average vert of  l_upperleg  to nearest pc point error: 0.044951489537225685
+average vert of  r_upperleg  to nearest pc point error: 0.027136541711193674
+average vert of  l_forearm  to nearest pc point error: 0.09513132839032774
+average vert of  r_forearm  to nearest pc point error: 0.0731056746535212
+average vert of  l_upperarm  to nearest pc point error: 0.039735058729957785
+average vert of  r_upperarm  to nearest pc point error: 0.04847618511438969
+average vert of  head  to nearest pc point error: 0.04969385129560339
+average vert of  torso  to nearest pc point error: 0.03573073616627462
+average pc point to nearest vert error: 0.048055243056668404
+adding to mesh 0
+adding to gt 19
+Precision is: 0.730800323362975
+Recall is: 0.6676514032496307
+Average error from overlapping: 0.06226769911504425
+Average error: 0.1407528156490812
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  451.82614 max:  199.07014   sum:  281111.28   sum:  81516.66   sum:  81188.28 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  311.015 max:  100.0 max:  451.82614 max:  199.07014   sum:  281111.28   sum:  0.0   sum:  225571.9   sum:  312482.78   sum:  81516.66   sum:  81188.28 
+0.0070393793 1.9041635
+0.11517562 0.9909009
+-0.22166593 0.32582134
+got here
+average vert to nearest pc point error: 0.06190944231091796
+average vert of  l_lowerleg  to nearest pc point error: 0.03924223130775285
+average vert of  r_lowerleg  to nearest pc point error: 0.06529851025958895
+average vert of  l_upperleg  to nearest pc point error: 0.03354086064541516
+average vert of  r_upperleg  to nearest pc point error: 0.04065372748159936
+average vert of  l_forearm  to nearest pc point error: 0.17385151181616615
+average vert of  r_forearm  to nearest pc point error: 0.17166199594004286
+average vert of  l_upperarm  to nearest pc point error: 0.041527389039777936
+average vert of  r_upperarm  to nearest pc point error: 0.09349728986271014
+average vert of  head  to nearest pc point error: 0.07964088863574895
+average vert of  torso  to nearest pc point error: 0.038607491685581294
+average pc point to nearest vert error: 0.054949489233680204
+adding to mesh 0
+adding to gt 55
+Precision is: 0.8166295471417966
+Recall is: 0.7135906584495622
+Average error from overlapping: 0.07092869318181819
+Average error: 0.18850188705619234
+height_in 72.0
+gender m
+weight_lbs 147.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi', 'rollpi', 'rollpi', 'hbh', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi', 'sl', 'phu', 'sl', 'phu', 'rollpi', 'sl', 'rollpi_plo', 'xl', 'xl', 'hbh', 'supine_plo', 'xl', 'rollpi', 'rollpi', 'phu', 'supine', 'hbh', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'phu', 'rollpi', 'supine', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S184
+height_in 72.0
+gender m
+weight_lbs 147.0
+prescribed_pose_type ['sl', 'rollpi_plo', 'rollpi_plo', 'supine', 'rollpi', 'rollpi', 'rollpi', 'hbh', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'hbh', 'rollpi', 'sl', 'phu', 'sl', 'phu', 'rollpi', 'sl', 'rollpi_plo', 'xl', 'xl', 'hbh', 'supine_plo', 'xl', 'rollpi', 'rollpi', 'phu', 'supine', 'hbh', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'phu', 'rollpi', 'supine', 'rollpi_plo', 'rollpi_plo', 'rollpi_plo', 'supine_plo', 'supine_plo', 'rollpi', 'rollpi_plo', 'rollpi', 'supine']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  374.76135 max:  215.42046   sum:  291559.9   sum:  81553.45   sum:  81811.45 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  162.10059 max:  100.0 max:  374.76135 max:  215.42046   sum:  291559.9   sum:  0.0   sum:  187440.38   sum:  293690.7   sum:  81553.45   sum:  81811.45 
+0.13210751 2.0008163
+0.04992835 0.9652755
+-0.5684249 0.15956233
+got here
+average vert to nearest pc point error: 0.056446325165598714
+average vert of  l_lowerleg  to nearest pc point error: 0.05059434728897529
+average vert of  r_lowerleg  to nearest pc point error: 0.05613535058014069
+average vert of  l_upperleg  to nearest pc point error: 0.042741891929415764
+average vert of  r_upperleg  to nearest pc point error: 0.03184202592944409
+average vert of  l_forearm  to nearest pc point error: 0.06149272763353956
+average vert of  r_forearm  to nearest pc point error: 0.2818982614266436
+average vert of  l_upperarm  to nearest pc point error: 0.07469918467041
+average vert of  r_upperarm  to nearest pc point error: 0.07524094501203131
+average vert of  head  to nearest pc point error: 0.04124083114545762
+average vert of  torso  to nearest pc point error: 0.02538766358299667
+average pc point to nearest vert error: 0.054800706052199194
+adding to mesh 0
+adding to gt 22
+Precision is: 0.819285977180714
+Recall is: 0.7053231939163498
+Average error from overlapping: 0.060385220125786156
+Average error: 0.12823090896627365
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  293.8933 max:  143.16988   sum:  345754.06   sum:  81719.8   sum:  81741.55 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  162.95186 max:  100.0 max:  293.8933 max:  143.16988   sum:  345754.06   sum:  0.0   sum:  203988.72   sum:  365778.38   sum:  81719.8   sum:  81741.55 
+0.12437506 1.9173223
+-0.014768202 0.8941567
+-0.15230346 0.15673947
+got here
+average vert to nearest pc point error: 0.02640977156299101
+average vert of  l_lowerleg  to nearest pc point error: 0.023496629028879164
+average vert of  r_lowerleg  to nearest pc point error: 0.033612441350345704
+average vert of  l_upperleg  to nearest pc point error: 0.019639326126870645
+average vert of  r_upperleg  to nearest pc point error: 0.025068417600799447
+average vert of  l_forearm  to nearest pc point error: 0.03924944368484573
+average vert of  r_forearm  to nearest pc point error: 0.023708695672972728
+average vert of  l_upperarm  to nearest pc point error: 0.026871754261827044
+average vert of  r_upperarm  to nearest pc point error: 0.04796725399282781
+average vert of  head  to nearest pc point error: 0.032312343297614815
+average vert of  torso  to nearest pc point error: 0.02293055198825651
+average pc point to nearest vert error: 0.038856012805695665
+adding to mesh 0
+adding to gt 21
+Precision is: 0.8965877437325905
+Recall is: 0.7134940426711001
+Average error from overlapping: 0.03192427184466019
+Average error: 0.08767857142857144
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  374.96405 max:  238.25569   sum:  279314.2   sum:  82105.16   sum:  82053.664 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  333.36963 max:  100.0 max:  374.96405 max:  238.25569   sum:  279314.2   sum:  0.0   sum:  166301.84   sum:  263192.06   sum:  82105.16   sum:  82053.664 
+0.111645445 1.8277508
+-0.184819 0.5619999
+-0.30975553 0.29537806
+got here
+average vert to nearest pc point error: 0.0533999742929559
+average vert of  l_lowerleg  to nearest pc point error: 0.01917413126811605
+average vert of  r_lowerleg  to nearest pc point error: 0.04246566756591658
+average vert of  l_upperleg  to nearest pc point error: 0.026272651134782013
+average vert of  r_upperleg  to nearest pc point error: 0.043506258079777135
+average vert of  l_forearm  to nearest pc point error: 0.10716978743835273
+average vert of  r_forearm  to nearest pc point error: 0.1940855675331686
+average vert of  l_upperarm  to nearest pc point error: 0.05217568484067887
+average vert of  r_upperarm  to nearest pc point error: 0.16326556350676633
+average vert of  head  to nearest pc point error: 0.06744648613338682
+average vert of  torso  to nearest pc point error: 0.04227017567740654
+average pc point to nearest vert error: 0.04358411632050755
+adding to mesh 0
+adding to gt 49
+Precision is: 0.787542662116041
+Recall is: 0.7160589604344453
+Average error from overlapping: 0.05703006500541712
+Average error: 0.17957798276983097
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  484.54785 max:  251.63718   sum:  292150.34   sum:  82134.05   sum:  82109.34 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  403.7379 max:  100.0 max:  484.54785 max:  251.63718   sum:  292150.34   sum:  0.0   sum:  229597.31   sum:  289377.75   sum:  82134.05   sum:  82109.34 
+0.06866653 1.7760249
+0.12987484 0.9058385
+-0.26010948 0.4741577
+got here
+average vert to nearest pc point error: 0.0738634871499543
+average vert of  l_lowerleg  to nearest pc point error: 0.08023971846520678
+average vert of  r_lowerleg  to nearest pc point error: 0.07106504942372496
+average vert of  l_upperleg  to nearest pc point error: 0.044018883453137814
+average vert of  r_upperleg  to nearest pc point error: 0.045159092982733004
+average vert of  l_forearm  to nearest pc point error: 0.3089226842911026
+average vert of  r_forearm  to nearest pc point error: 0.10485228802923628
+average vert of  l_upperarm  to nearest pc point error: 0.21034547240123985
+average vert of  r_upperarm  to nearest pc point error: 0.04004989413528132
+average vert of  head  to nearest pc point error: 0.04901286575721651
+average vert of  torso  to nearest pc point error: 0.05797074144832752
+average pc point to nearest vert error: 0.05880245458612321
+adding to mesh 0
+adding to gt 81
+Precision is: 0.7359139784946237
+Recall is: 0.6271994134897361
+Average error from overlapping: 0.0938343804792519
+Average error: 0.31170930580490724
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  293.16003 max:  157.81573   sum:  314048.78   sum:  80917.305   sum:  81280.15 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  301.38376 max:  100.0 max:  293.16003 max:  157.81573   sum:  314048.78   sum:  0.0   sum:  275034.12   sum:  351093.88   sum:  80917.305   sum:  81280.15 
+0.1154912 2.0507205
+-0.011412997 0.7986957
+-0.19264202 0.27527452
+got here
+average vert to nearest pc point error: 0.0422872228259252
+average vert of  l_lowerleg  to nearest pc point error: 0.03995232833332083
+average vert of  r_lowerleg  to nearest pc point error: 0.07651026084736998
+average vert of  l_upperleg  to nearest pc point error: 0.027342096352896857
+average vert of  r_upperleg  to nearest pc point error: 0.04842682803346268
+average vert of  l_forearm  to nearest pc point error: 0.03103156724640087
+average vert of  r_forearm  to nearest pc point error: 0.13137377962919564
+average vert of  l_upperarm  to nearest pc point error: 0.026140130147193096
+average vert of  r_upperarm  to nearest pc point error: 0.023214209018137377
+average vert of  head  to nearest pc point error: 0.03790394625871592
+average vert of  torso  to nearest pc point error: 0.02350561285363221
+average pc point to nearest vert error: 0.04301308455485134
+adding to mesh 0
+adding to gt 46
+Precision is: 0.8068220195879771
+Recall is: 0.666201896263246
+Average error from overlapping: 0.04221169945583926
+Average error: 0.1621793831168831
+height_in 63.0
+gender f
+weight_lbs 120.0
+prescribed_pose_type ['sl', 'rollpi', 'rollpi', 'rollpi_plo', 'supine', 'rollpi_plo', 'phu', 'supine', 'sl', 'rollpi_plo', 'supine', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'hbh', 'rollpi_plo', 'sl', 'rollpi_plo', 'rollpi', 'hbh', 'sl', 'supine_plo', 'rollpi_plo', 'xl', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'hbh', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi', 'phu', 'rollpi_plo', 'phu', 'xl', 'xl', 'phu', 'rollpi', 'supine_plo', 'supine_plo', 'supine', 'rollpi', 'supine_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S187
+height_in 63.0
+gender f
+weight_lbs 120.0
+prescribed_pose_type ['sl', 'rollpi', 'rollpi', 'rollpi_plo', 'supine', 'rollpi_plo', 'phu', 'supine', 'sl', 'rollpi_plo', 'supine', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'hbh', 'rollpi_plo', 'sl', 'rollpi_plo', 'rollpi', 'hbh', 'sl', 'supine_plo', 'rollpi_plo', 'xl', 'rollpi', 'rollpi', 'rollpi', 'rollpi', 'hbh', 'rollpi_plo', 'hbh', 'rollpi', 'rollpi', 'phu', 'rollpi_plo', 'phu', 'xl', 'xl', 'phu', 'rollpi', 'supine_plo', 'supine_plo', 'supine', 'rollpi', 'supine_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  293.67233 max:  152.59576   sum:  307142.94   sum:  81939.266   sum:  81486.36 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  147.61061 max:  100.0 max:  293.67233 max:  152.59576   sum:  307142.94   sum:  0.0   sum:  129266.01   sum:  268634.56   sum:  81939.266   sum:  81486.36 
+0.19893749 1.8131336
+-0.02164461 0.75730133
+-0.21230939 0.14106399
+got here
+average vert to nearest pc point error: 0.04409025920512011
+average vert of  l_lowerleg  to nearest pc point error: 0.04234278000967206
+average vert of  r_lowerleg  to nearest pc point error: 0.0517055865477402
+average vert of  l_upperleg  to nearest pc point error: 0.03589706435439813
+average vert of  r_upperleg  to nearest pc point error: 0.057866589763006626
+average vert of  l_forearm  to nearest pc point error: 0.09926832110108941
+average vert of  r_forearm  to nearest pc point error: 0.07964245049751272
+average vert of  l_upperarm  to nearest pc point error: 0.01769017205622119
+average vert of  r_upperarm  to nearest pc point error: 0.051708991310238886
+average vert of  head  to nearest pc point error: 0.02844620731535935
+average vert of  torso  to nearest pc point error: 0.028339918339497373
+average pc point to nearest vert error: 0.04364902880277938
+adding to mesh 0
+adding to gt 17
+Precision is: 0.856140350877193
+Recall is: 0.7735117999295527
+Average error from overlapping: 0.05323087431693989
+Average error: 0.09600783198254365
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  351.24228 max:  204.44037   sum:  288967.0   sum:  82064.516   sum:  82057.07 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  163.68489 max:  100.0 max:  351.24228 max:  204.44037   sum:  288967.0   sum:  0.0   sum:  169142.22   sum:  282086.8   sum:  82064.516   sum:  82057.07 
+0.24798061 1.9245292
+0.045811485 0.79824376
+-0.22773585 0.19445518
+got here
+average vert to nearest pc point error: 0.054761648384580246
+average vert of  l_lowerleg  to nearest pc point error: 0.043878776395229094
+average vert of  r_lowerleg  to nearest pc point error: 0.05493995474180842
+average vert of  l_upperleg  to nearest pc point error: 0.03854873123834579
+average vert of  r_upperleg  to nearest pc point error: 0.04971158351158685
+average vert of  l_forearm  to nearest pc point error: 0.12276641519410922
+average vert of  r_forearm  to nearest pc point error: 0.09110956360903573
+average vert of  l_upperarm  to nearest pc point error: 0.057704223009430455
+average vert of  r_upperarm  to nearest pc point error: 0.06838613523052188
+average vert of  head  to nearest pc point error: 0.043255745307505755
+average vert of  torso  to nearest pc point error: 0.048130898352137234
+average pc point to nearest vert error: 0.05576328444492429
+adding to mesh 0
+adding to gt 29
+Precision is: 0.7473351756810107
+Recall is: 0.6804457225017972
+Average error from overlapping: 0.0684270998415214
+Average error: 0.1366925409117475
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  280.43912 max:  160.26419   sum:  232385.31   sum:  82002.766   sum:  81872.05 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  226.4512 max:  100.0 max:  280.43912 max:  160.26419   sum:  232385.31   sum:  0.0   sum:  153374.31   sum:  268942.62   sum:  82002.766   sum:  81872.05 
+0.2981376 1.837885
+0.17453794 0.7570758
+-0.24129586 0.20527805
+got here
+average vert to nearest pc point error: 0.04052035674646786
+average vert of  l_lowerleg  to nearest pc point error: 0.05308793650897084
+average vert of  r_lowerleg  to nearest pc point error: 0.03418022925098516
+average vert of  l_upperleg  to nearest pc point error: 0.021580956075722864
+average vert of  r_upperleg  to nearest pc point error: 0.034555212797690055
+average vert of  l_forearm  to nearest pc point error: 0.033092261668001964
+average vert of  r_forearm  to nearest pc point error: 0.059504289249226947
+average vert of  l_upperarm  to nearest pc point error: 0.026084516720717075
+average vert of  r_upperarm  to nearest pc point error: 0.12312761581720988
+average vert of  head  to nearest pc point error: 0.04059705049555655
+average vert of  torso  to nearest pc point error: 0.03819778236979237
+average pc point to nearest vert error: 0.04157613864035124
+adding to mesh 0
+adding to gt 29
+Precision is: 0.7605504587155963
+Recall is: 0.684275691291787
+Average error from overlapping: 0.051955292521109774
+Average error: 0.13632746179966043
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  272.1084 max:  168.48785   sum:  247686.0   sum:  81944.04   sum:  81891.54 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  184.53023 max:  100.0 max:  272.1084 max:  168.48785   sum:  247686.0   sum:  0.0   sum:  147574.44   sum:  248610.19   sum:  81944.04   sum:  81891.54 
+0.30726498 1.8103703
+0.095140114 0.880283
+-0.21091135 0.18960498
+got here
+average vert to nearest pc point error: 0.04556848948166915
+average vert of  l_lowerleg  to nearest pc point error: 0.029387502644129884
+average vert of  r_lowerleg  to nearest pc point error: 0.07338989718167326
+average vert of  l_upperleg  to nearest pc point error: 0.05199101409265138
+average vert of  r_upperleg  to nearest pc point error: 0.024881790486568748
+average vert of  l_forearm  to nearest pc point error: 0.08780480803596931
+average vert of  r_forearm  to nearest pc point error: 0.04254042320417724
+average vert of  l_upperarm  to nearest pc point error: 0.07714764434890582
+average vert of  r_upperarm  to nearest pc point error: 0.035547266256260784
+average vert of  head  to nearest pc point error: 0.03504559925579894
+average vert of  torso  to nearest pc point error: 0.043193566709076765
+average pc point to nearest vert error: 0.052145274687578486
+adding to mesh 0
+adding to gt 26
+Precision is: 0.7919690372520561
+Recall is: 0.6725554642563681
+Average error from overlapping: 0.05905161881490532
+Average error: 0.1356559881284916
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  251.60167 max:  129.06104   sum:  299261.56   sum:  82146.3   sum:  82121.93 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  311.53143 max:  100.0 max:  251.60167 max:  129.06104   sum:  299261.56   sum:  0.0   sum:  241608.84   sum:  340824.97   sum:  82146.3   sum:  82121.93 
+0.11643405 1.8702093
+0.1851734 0.7868258
+-0.15792452 0.25886038
+got here
+average vert to nearest pc point error: 0.04145095050501458
+average vert of  l_lowerleg  to nearest pc point error: 0.027426332002250805
+average vert of  r_lowerleg  to nearest pc point error: 0.024570570157848224
+average vert of  l_upperleg  to nearest pc point error: 0.021051690644924344
+average vert of  r_upperleg  to nearest pc point error: 0.02288168969267844
+average vert of  l_forearm  to nearest pc point error: 0.18556338215093737
+average vert of  r_forearm  to nearest pc point error: 0.10443238859992039
+average vert of  l_upperarm  to nearest pc point error: 0.11177867822140689
+average vert of  r_upperarm  to nearest pc point error: 0.0429433480942278
+average vert of  head  to nearest pc point error: 0.05083621364973713
+average vert of  torso  to nearest pc point error: 0.0173251403793889
+average pc point to nearest vert error: 0.041764442144929685
+adding to mesh 0
+adding to gt 42
+Precision is: 0.8666666666666667
+Recall is: 0.8208029197080292
+Average error from overlapping: 0.05097598932859048
+Average error: 0.11187601263771872
+height_in 78.0
+gender m
+weight_lbs 225.0
+prescribed_pose_type ['rollpi_plo', 'rollpi_plo', 'phu', 'sl', 'xl', 'sl', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'hbh', 'rollpi_plo', 'rollpi', 'xl', 'rollpi_plo', 'phu', 'rollpi_plo', 'phu', 'supine_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'hbh', 'xl', 'sl', 'supine_plo', 'supine', 'phu', 'rollpi', 'rollpi', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'supine', 'rollpi', 'rollpi', 'supine_plo', 'rollpi', 'supine']
+p_select_pose_type ['r_lateral', 'l_lateral', 'prone', 'no_instr', 'supine']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S188
+height_in 78.0
+gender m
+weight_lbs 225.0
+prescribed_pose_type ['rollpi_plo', 'rollpi_plo', 'phu', 'sl', 'xl', 'sl', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'hbh', 'rollpi_plo', 'rollpi', 'xl', 'rollpi_plo', 'phu', 'rollpi_plo', 'phu', 'supine_plo', 'hbh', 'rollpi', 'rollpi', 'rollpi_plo', 'hbh', 'xl', 'sl', 'supine_plo', 'supine', 'phu', 'rollpi', 'rollpi', 'hbh', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'rollpi', 'supine', 'rollpi', 'rollpi', 'supine_plo', 'rollpi', 'supine']
+p_select_pose_type ['r_lateral', 'l_lateral', 'prone', 'no_instr', 'supine']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  134.68858 max:  92.79238   sum:  347705.12   sum:  81976.18   sum:  81831.06 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  218.04204 max:  100.0 max:  134.68858 max:  92.79238   sum:  347705.12   sum:  0.0   sum:  236600.97   sum:  315075.7   sum:  81976.18   sum:  81831.06 
+-0.043480385 2.0390723
+-0.13963418 0.6529278
+-0.33999598 0.22638278
+got here
+average vert to nearest pc point error: 0.06045599820183632
+average vert of  l_lowerleg  to nearest pc point error: 0.0660581218852036
+average vert of  r_lowerleg  to nearest pc point error: 0.06524233888247664
+average vert of  l_upperleg  to nearest pc point error: 0.037942295915985906
+average vert of  r_upperleg  to nearest pc point error: 0.06420451544694344
+average vert of  l_forearm  to nearest pc point error: 0.14777474435222973
+average vert of  r_forearm  to nearest pc point error: 0.11861114823507835
+average vert of  l_upperarm  to nearest pc point error: 0.027327308156584365
+average vert of  r_upperarm  to nearest pc point error: 0.08960385744109904
+average vert of  head  to nearest pc point error: 0.08744461293615936
+average vert of  torso  to nearest pc point error: 0.03715023054403076
+average pc point to nearest vert error: 0.06199267050049346
+adding to mesh 0
+adding to gt 30
+Precision is: 0.6487544483985765
+Recall is: 0.782067782067782
+Average error from overlapping: 0.09303414701042238
+Average error: 0.18389749095840868
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  180.85956 max:  128.63594   sum:  326345.8   sum:  81959.0   sum:  81956.57 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  348.06003 max:  100.0 max:  180.85956 max:  128.63594   sum:  326345.8   sum:  0.0   sum:  260199.69   sum:  304986.5   sum:  81959.0   sum:  81956.57 
+0.035262506 1.9592613
+0.23021306 1.0539924
+-0.26298594 0.31698877
+got here
+average vert to nearest pc point error: 0.0683447746246006
+average vert of  l_lowerleg  to nearest pc point error: 0.046157957633457786
+average vert of  r_lowerleg  to nearest pc point error: 0.04411976625725287
+average vert of  l_upperleg  to nearest pc point error: 0.07396925417983582
+average vert of  r_upperleg  to nearest pc point error: 0.04982754847356688
+average vert of  l_forearm  to nearest pc point error: 0.22368778667523034
+average vert of  r_forearm  to nearest pc point error: 0.15746752055394606
+average vert of  l_upperarm  to nearest pc point error: 0.17417337751553474
+average vert of  r_upperarm  to nearest pc point error: 0.05681395819111591
+average vert of  head  to nearest pc point error: 0.03843371833243807
+average vert of  torso  to nearest pc point error: 0.06568092086529395
+average pc point to nearest vert error: 0.05805093789886305
+adding to mesh 0
+adding to gt 50
+Precision is: 0.671647509578544
+Recall is: 0.7605206073752712
+Average error from overlapping: 0.08905911294922988
+Average error: 0.2254986954459203
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  216.1508 max:  159.8605   sum:  347551.06   sum:  80985.555   sum:  80105.47 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  208.65176 max:  100.0 max:  216.1508 max:  159.8605   sum:  347551.06   sum:  0.0   sum:  197572.7   sum:  229612.72   sum:  80985.555   sum:  80105.47 
+0.21918727 2.0573235
+0.15200509 0.906574
+-0.27665818 0.22196822
+got here
+average vert to nearest pc point error: 0.06069240977789166
+average vert of  l_lowerleg  to nearest pc point error: 0.0419815127114524
+average vert of  r_lowerleg  to nearest pc point error: 0.049147996747303545
+average vert of  l_upperleg  to nearest pc point error: 0.060676570094740256
+average vert of  r_upperleg  to nearest pc point error: 0.048221151171898256
+average vert of  l_forearm  to nearest pc point error: 0.08984127582276052
+average vert of  r_forearm  to nearest pc point error: 0.08534433555575387
+average vert of  l_upperarm  to nearest pc point error: 0.061072188769976846
+average vert of  r_upperarm  to nearest pc point error: 0.1463855103832452
+average vert of  head  to nearest pc point error: 0.04699570848121294
+average vert of  torso  to nearest pc point error: 0.05419668578332481
+average pc point to nearest vert error: 0.0741707212644518
+adding to mesh 0
+adding to gt 32
+Precision is: 0.7702702702702703
+Recall is: 0.6294101804470779
+Average error from overlapping: 0.07422897946084725
+Average error: 0.1816591553287982
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  168.63321 max:  92.15687   sum:  436325.78   sum:  81869.625   sum:  81415.8 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  178.03268 max:  100.0 max:  168.63321 max:  92.15687   sum:  436325.78   sum:  0.0   sum:  300808.06   sum:  423900.4   sum:  81869.625   sum:  81415.8 
+0.049827825 1.9685606
+-0.06291498 1.1135805
+-0.19538844 0.2032378
+got here
+average vert to nearest pc point error: 0.03796760371164659
+average vert of  l_lowerleg  to nearest pc point error: 0.028269925903209866
+average vert of  r_lowerleg  to nearest pc point error: 0.04581097558771264
+average vert of  l_upperleg  to nearest pc point error: 0.021566424862329875
+average vert of  r_upperleg  to nearest pc point error: 0.02712654090926873
+average vert of  l_forearm  to nearest pc point error: 0.11100461479034293
+average vert of  r_forearm  to nearest pc point error: 0.0932818459256341
+average vert of  l_upperarm  to nearest pc point error: 0.051297684259325495
+average vert of  r_upperarm  to nearest pc point error: 0.07467409501892752
+average vert of  head  to nearest pc point error: 0.056782920854278725
+average vert of  torso  to nearest pc point error: 0.028848748059623636
+average pc point to nearest vert error: 0.041157449899611946
+adding to mesh 0
+adding to gt 27
+Precision is: 0.8384918401800788
+Recall is: 0.756153260593758
+Average error from overlapping: 0.0439253355704698
+Average error: 0.10702768549280177
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  167.42268 max:  100.83084   sum:  438071.5   sum:  81760.61   sum:  81344.875 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  179.53069 max:  100.0 max:  167.42268 max:  100.83084   sum:  438071.5   sum:  0.0   sum:  291973.75   sum:  408599.72   sum:  81760.61   sum:  81344.875 
+0.032623034 1.9728433
+0.019871455 1.1566576
+-0.2008322 0.22034192
+got here
+average vert to nearest pc point error: 0.04056957289428828
+average vert of  l_lowerleg  to nearest pc point error: 0.032895205070224635
+average vert of  r_lowerleg  to nearest pc point error: 0.04495450342580855
+average vert of  l_upperleg  to nearest pc point error: 0.024845697380599722
+average vert of  r_upperleg  to nearest pc point error: 0.02615015686188381
+average vert of  l_forearm  to nearest pc point error: NULL appending 0
+average vert of  r_forearm  to nearest pc point error: 0.102287976712135
+average vert of  l_upperarm  to nearest pc point error: 0.0535107481532153
+average vert of  r_upperarm  to nearest pc point error: 0.08367639210715272
+average vert of  head  to nearest pc point error: 0.05492820355943073
+average vert of  torso  to nearest pc point error: 0.03099885515306583
+average pc point to nearest vert error: 0.04244769438192334
+adding to mesh 0
+adding to gt 31
+Precision is: 0.8400548696844993
+Recall is: 0.7831202046035806
+Average error from overlapping: 0.050024902024820385
+Average error: 0.1140393389717338
+height_in 68.0
+gender f
+weight_lbs 120.0
+prescribed_pose_type ['rollpi_plo', 'hbh', 'rollpi_plo', 'hbh', 'xl', 'sl', 'sl', 'sl', 'rollpi', 'supine_plo', 'supine_plo', 'xl', 'rollpi_plo', 'rollpi', 'phu', 'phu', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'supine', 'phu', 'sl', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'hbh', 'hbh', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'supine', 'supine_plo', 'supine', 'phu', 'rollpi', 'rollpi', 'supine', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+participant directory:  /home/zjy/bodies-at-rest-master/data_BR/real/S196
+height_in 68.0
+gender f
+weight_lbs 120.0
+prescribed_pose_type ['rollpi_plo', 'hbh', 'rollpi_plo', 'hbh', 'xl', 'sl', 'sl', 'sl', 'rollpi', 'supine_plo', 'supine_plo', 'xl', 'rollpi_plo', 'rollpi', 'phu', 'phu', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'rollpi_plo', 'supine', 'phu', 'sl', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo', 'rollpi_plo', 'hbh', 'hbh', 'rollpi', 'rollpi_plo', 'xl', 'rollpi_plo', 'supine_plo', 'rollpi_plo', 'supine', 'supine_plo', 'supine', 'phu', 'rollpi', 'rollpi', 'supine', 'rollpi', 'rollpi', 'rollpi', 'rollpi_plo']
+p_select_pose_type ['no_instr', 'supine', 'r_lateral', 'l_lateral', 'prone']
+Network 1 loaded.
+Network 2 loaded.
+Pose type:  p_sel_any
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  478.60544 max:  202.04012   sum:  336306.62   sum:  82151.16   sum:  82127.81 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+######################### CUDA is available! #############################
+anglesDC
+all VERTS LIST
+max:  100.0 max:  0.0 max:  133.64314 max:  100.0 max:  478.60544 max:  202.04012   sum:  336306.62   sum:  0.0   sum:  125166.66   sum:  279006.16   sum:  82151.16   sum:  82127.81 
+0.15084852 1.8202349
+-0.15240069 0.7723565
+-0.20699057 0.13913554
+got here
+average vert to nearest pc point error: 0.025618260855613324
+average vert of  l_lowerleg  to nearest pc point error: 0.01655621706010612
+average vert of  r_lowerleg  to nearest pc point error: 0.02689831227220201
+average vert of  l_upperleg  to nearest pc point error: 0.01724267568581601
+average vert of  r_upperleg  to nearest pc point error: 0.033470436606646004
+average vert of  l_forearm  to nearest pc point error: 0.053109229016943385
+average vert of  r_forearm  to nearest pc point error: 0.06796833593650614
+average vert of  l_upperarm  to nearest pc point error: 0.012583305228458066
+average vert of  r_upperarm  to nearest pc point error: 0.029732596810882604
+average vert of  head  to nearest pc point error: 0.030080341895827492
+average vert of  torso  to nearest pc point error: 0.020818240653535155
+average pc point to nearest vert error: 0.034454795429242305
+adding to mesh 0
+adding to gt 14
+Precision is: 0.852051388313303
+Recall is: 0.7131460284425946
+Average error from overlapping: 0.033111624513618675
+Average error: 0.08518364197530864
+Pose type:  p_sel_sup
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  374.81125 max:  155.93167   sum:  283832.56   sum:  81906.81   sum:  81665.25 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  152.94162 max:  100.0 max:  374.81125 max:  155.93167   sum:  283832.56   sum:  0.0   sum:  134063.64   sum:  260932.88   sum:  81906.81   sum:  81665.25 
+0.18464173 1.866042
+0.096533194 0.8313081
+-0.32517093 0.14707577
+got here
+average vert to nearest pc point error: 0.043181372684536395
+average vert of  l_lowerleg  to nearest pc point error: 0.025952298359319847
+average vert of  r_lowerleg  to nearest pc point error: 0.04636918872056813
+average vert of  l_upperleg  to nearest pc point error: 0.0285788506465926
+average vert of  r_upperleg  to nearest pc point error: 0.05258937999278574
+average vert of  l_forearm  to nearest pc point error: 0.21843764294571155
+average vert of  r_forearm  to nearest pc point error: 0.05216865256293917
+average vert of  l_upperarm  to nearest pc point error: 0.058954109437207726
+average vert of  r_upperarm  to nearest pc point error: 0.035107216942731806
+average vert of  head  to nearest pc point error: 0.029928471016389555
+average vert of  torso  to nearest pc point error: 0.022900925039641536
+average pc point to nearest vert error: 0.037451933536731145
+adding to mesh 0
+adding to gt 16
+Precision is: 0.8194276501410721
+Recall is: 0.709103592605511
+Average error from overlapping: 0.04532556566650271
+Average error: 0.10313744343891403
+Pose type:  p_sel_ll
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  481.1333 max:  299.12772   sum:  230434.25   sum:  82151.234   sum:  82151.24 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  299.42282 max:  100.0 max:  481.1333 max:  299.12772   sum:  230434.25   sum:  0.0   sum:  230947.69   sum:  273563.62   sum:  82151.234   sum:  82151.24 
+0.277494 1.6839025
+0.08467378 0.62107664
+-0.20307787 0.29133463
+got here
+average vert to nearest pc point error: 0.05338245761846524
+average vert of  l_lowerleg  to nearest pc point error: 0.049928913982791916
+average vert of  r_lowerleg  to nearest pc point error: 0.09021228413641373
+average vert of  l_upperleg  to nearest pc point error: 0.02699625158120441
+average vert of  r_upperleg  to nearest pc point error: 0.05240598151667269
+average vert of  l_forearm  to nearest pc point error: 0.06493176053456937
+average vert of  r_forearm  to nearest pc point error: 0.09297146741285374
+average vert of  l_upperarm  to nearest pc point error: 0.04000552410331798
+average vert of  r_upperarm  to nearest pc point error: 0.16929669020120597
+average vert of  head  to nearest pc point error: 0.058294015804494656
+average vert of  torso  to nearest pc point error: 0.03131598195463103
+average pc point to nearest vert error: 0.05993012509627872
+adding to mesh 0
+adding to gt 44
+Precision is: 0.7654741624077229
+Recall is: 0.5907099035933392
+Average error from overlapping: 0.05946587537091988
+Average error: 0.19640677179962893
+Pose type:  p_sel_rl
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  487.09573 max:  288.35474   sum:  237519.78   sum:  81842.54   sum:  81729.97 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  267.7568 max:  100.0 max:  487.09573 max:  288.35474   sum:  237519.78   sum:  0.0   sum:  165262.62   sum:  253847.33   sum:  81842.54   sum:  81729.97 
+0.17459501 1.718283
+0.25788522 0.8778424
+-0.21847802 0.22278528
+got here
+average vert to nearest pc point error: 0.050683771545346874
+average vert of  l_lowerleg  to nearest pc point error: 0.07352586571698311
+average vert of  r_lowerleg  to nearest pc point error: 0.03759536711300283
+average vert of  l_upperleg  to nearest pc point error: 0.041573029615083315
+average vert of  r_upperleg  to nearest pc point error: 0.02821464627071593
+average vert of  l_forearm  to nearest pc point error: 0.11263037251191249
+average vert of  r_forearm  to nearest pc point error: 0.0603215658673489
+average vert of  l_upperarm  to nearest pc point error: 0.08931187596865828
+average vert of  r_upperarm  to nearest pc point error: 0.05017365909693423
+average vert of  head  to nearest pc point error: 0.036033347012371715
+average vert of  torso  to nearest pc point error: 0.049844954562013113
+average pc point to nearest vert error: 0.04462386574543589
+adding to mesh 0
+adding to gt 31
+Precision is: 0.7142091152815013
+Recall is: 0.6941115164147994
+Average error from overlapping: 0.07294153528528528
+Average error: 0.16694713499184338
+Pose type:  p_sel_prn
+normalizing per image True
+(1, 2, 64, 27)
+ConvNet input size:  torch.Size([1, 3, 128, 54])
+max:  100.0 max:  266.53857 max:  163.36267   sum:  292355.75   sum:  82108.51   sum:  82120.11 
+Using model 2
+5 torch.Size([1, 5, 64, 27])
+ConvNet input size:  torch.Size([1, 6, 128, 54])
+max:  100.0 max:  0.0 max:  289.1429 max:  100.0 max:  266.53857 max:  163.36267   sum:  292355.75   sum:  0.0   sum:  197266.69   sum:  327475.38   sum:  82108.51   sum:  82120.11 
+0.13604344 1.7534503
+0.031486135 0.9424708
+-0.14662246 0.3760882
+got here
+average vert to nearest pc point error: 0.042557068913617074
+average vert of  l_lowerleg  to nearest pc point error: 0.08675578944494437
+average vert of  r_lowerleg  to nearest pc point error: 0.053321220903245946
+average vert of  l_upperleg  to nearest pc point error: 0.031350536353649226
+average vert of  r_upperleg  to nearest pc point error: 0.032067356321418904
+average vert of  l_forearm  to nearest pc point error: 0.05644580711925703
+average vert of  r_forearm  to nearest pc point error: 0.12771987360742337
+average vert of  l_upperarm  to nearest pc point error: 0.040065021570645586
+average vert of  r_upperarm  to nearest pc point error: 0.07828395538722087
+average vert of  head  to nearest pc point error: 0.02730670526670222
+average vert of  torso  to nearest pc point error: 0.027112001822484334
+average pc point to nearest vert error: 0.052570884038650255
+adding to mesh 0
+adding to gt 61
+Precision is: 0.7639639639639639
+Recall is: 0.5691275167785235
+Average error from overlapping: 0.049176739386792456
+Average error: 0.2307956977739726
