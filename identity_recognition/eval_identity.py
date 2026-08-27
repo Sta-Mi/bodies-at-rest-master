@@ -6,25 +6,18 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from dataset import IdentityDataset, load_subject_ids
+from dataset import DEFAULT_DATA_ROOT, IdentityDataset, discover_subject_ids
 from models import ArcMarginProduct, build_model
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate a trained identity classifier.")
     parser.add_argument("--checkpoint", required=True)
-    parser.add_argument("--split", default="real_all.txt")
-    parser.add_argument("--mode", default="pressure", choices=["pressure", "depth_cover1", "depth_cover2", "depth_uncover"])
+    parser.add_argument("--data_root", type=Path, default=DEFAULT_DATA_ROOT)
+    parser.add_argument("--sessions", nargs="+", default=None)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--device", default="cuda")
-    parser.add_argument("--out_dir", default=str(Path("/home/shnh/DATA/zjy/BodyMAP_identity/eval")))
-    parser.add_argument("--pose_start", type=int, default=None)
-    parser.add_argument("--pose_end", type=int, default=None)
-    parser.add_argument(
-        "--all_poses",
-        action="store_true",
-        help="Evaluate every pose, including training poses (diagnostic only).",
-    )
+    parser.add_argument("--out_dir", default="identity_recognition/runs/eval")
     return parser.parse_args()
 
 
@@ -57,34 +50,21 @@ def main():
     label_to_idx = ckpt.get("label_to_idx")
     if label_to_idx is None:
         raise ValueError("Checkpoint does not contain label_to_idx; cannot build closed-set labels.")
-    subject_ids = [sid for sid in load_subject_ids(args.split) if sid in label_to_idx]
+    subject_ids = [sid for sid in discover_subject_ids(args.data_root) if sid in label_to_idx]
     if not subject_ids:
         raise ValueError(
-            f"Split {args.split} has no subjects present in the checkpoint label map. "
-            "Use an overlapping closed-set split for identity evaluation."
+            "The data root has no subjects present in the checkpoint label map."
         )
-
-    if args.all_poses and (args.pose_start is not None or args.pose_end is not None):
-        raise ValueError("--all_poses cannot be combined with --pose_start/--pose_end")
-    pose_indices = None
-    if not args.all_poses and args.pose_start is None and args.pose_end is None:
-        pose_indices = ckpt.get("config", {}).get("val_pose_indices")
-        if pose_indices is None:
-            raise ValueError(
-                "Checkpoint does not record val_pose_indices. Provide an explicit "
-                "--pose_start/--pose_end range, or pass --all_poses for a leakage-prone "
-                "diagnostic evaluation."
-            )
-        print(f"Using checkpoint validation poses: {pose_indices}")
+    sessions = args.sessions or ckpt.get("config", {}).get("val_sessions")
+    if not sessions:
+        raise ValueError("No evaluation sessions specified or recorded in checkpoint")
+    print(f"Using held-out sessions: {sessions}")
 
     dataset = IdentityDataset(
-        args.split,
-        mode=args.mode,
+        data_root=args.data_root,
+        sessions=sessions,
         subject_ids=subject_ids,
         label_to_idx=label_to_idx,
-        pose_start=args.pose_start if pose_indices is None else None,
-        pose_end=args.pose_end if pose_indices is None else None,
-        pose_indices=pose_indices,
     )
     loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=0)
 
@@ -143,8 +123,10 @@ def main():
         "acc_subject": subject_correct / max(subject_total, 1),
         "subject_total": subject_total,
         "checkpoint_epoch": ckpt.get("epoch"),
-        "pose_indices": pose_indices,
-        "includes_training_poses": bool(args.all_poses),
+        "sessions": sessions,
+        "includes_training_sessions": bool(
+            set(sessions) & set(ckpt.get("config", {}).get("train_sessions", []))
+        ),
     }
     (out_dir / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False))
     (out_dir / "predictions.json").write_text(json.dumps(per_subject, indent=2, ensure_ascii=False))
@@ -154,8 +136,8 @@ def main():
                 "embeddings": torch.cat(all_embeddings, dim=0),
                 "labels": labels,
                 "idx_to_label": ckpt["idx_to_label"],
-                "pose_indices": pose_indices,
-                "includes_training_poses": bool(args.all_poses),
+                "sessions": sessions,
+                "includes_training_sessions": metrics["includes_training_sessions"],
             },
             out_dir / "embeddings.pt",
         )

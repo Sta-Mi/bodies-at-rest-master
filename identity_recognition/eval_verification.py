@@ -11,7 +11,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate identity verification embeddings.")
     parser.add_argument("--embeddings", required=True, type=Path)
     parser.add_argument("--out", type=Path, default=None)
-    parser.add_argument("--allow_training_poses", action="store_true")
+    parser.add_argument("--allow_training_sessions", action="store_true")
     return parser.parse_args()
 
 
@@ -63,13 +63,13 @@ def verification_metrics(embeddings, labels):
 def main():
     args = parse_args()
     data = torch.load(args.embeddings, map_location="cpu", weights_only=False)
-    if data.get("includes_training_poses", False) and not args.allow_training_poses:
+    if data.get("includes_training_sessions", False) and not args.allow_training_sessions:
         raise ValueError(
-            "Embeddings include training poses. Use held-out embeddings for formal "
-            "verification, or pass --allow_training_poses for diagnostics only."
+            "Embeddings include training sessions. Use held-out recordings for formal "
+            "verification, or pass --allow_training_sessions for diagnostics only."
         )
     metrics = verification_metrics(data["embeddings"], data["labels"])
-    metrics["pose_indices"] = data.get("pose_indices")
+    metrics["sessions"] = data.get("sessions")
     output = args.out or args.embeddings.with_name("verification_metrics.json")
     output.write_text(json.dumps(metrics, indent=2, ensure_ascii=False))
     print(json.dumps(metrics, indent=2, ensure_ascii=False))

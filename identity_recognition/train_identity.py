@@ -10,17 +10,17 @@ from torch import nn
 from torch.utils.data import DataLoader, Sampler
 from tqdm import tqdm
 
-from dataset import IdentityDataset, BASE_PATH, DATA_PATH, MODES, load_subject_ids
+from dataset import DEFAULT_DATA_ROOT, IdentityDataset, discover_subject_ids
 from eval_verification import verification_metrics
 from models import ArcMarginProduct, build_model
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Train a closed-set body identity classifier.")
-    parser.add_argument("--mode", default="pressure", choices=["pressure", "depth_cover1", "depth_cover2", "depth_uncover"])
-    parser.add_argument("--train_split", default="real_all.txt")
-    parser.add_argument("--val_split", default="real_all.txt")
-    parser.add_argument("--model", default="convnextv2_base")
+    parser.add_argument("--data_root", type=Path, default=DEFAULT_DATA_ROOT)
+    parser.add_argument("--train_sessions", nargs="+", default=["prescribed"])
+    parser.add_argument("--val_sessions", nargs="+", default=["p_select"])
+    parser.add_argument("--model", default="pressure_arcface")
     parser.add_argument("--embedding_dim", type=int, default=256)
     parser.add_argument("--arcface_scale", type=float, default=30.0)
     parser.add_argument("--arcface_margin", type=float, default=0.3)
@@ -41,21 +41,9 @@ def parse_args():
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--workers", type=int, default=0)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--out_dir", default=str(Path("/home/shnh/DATA/zjy/BodyMAP_identity")))
+    parser.add_argument("--out_dir", default=str(Path("identity_recognition/runs/pressure_arcface")))
     parser.add_argument("--limit_subjects", type=int, default=None)
-    parser.add_argument("--limit_poses", type=int, default=None)
-    parser.add_argument("--split_strategy", choices=["stratified", "range"], default="stratified")
-    parser.add_argument("--pose_folds", type=int, default=5)
-    parser.add_argument("--pose_fold", type=int, default=4)
-    parser.add_argument("--train_pose_start", type=int, default=0)
-    parser.add_argument("--train_pose_end", type=int, default=35)
-    parser.add_argument("--val_pose_start", type=int, default=35)
-    parser.add_argument("--val_pose_end", type=int, default=None)
-    parser.add_argument(
-        "--allow_disjoint_subjects",
-        action="store_true",
-        help="Allow subject-disjoint validation for representation diagnostics only; closed-set identity accuracy is not meaningful.",
-    )
+    parser.add_argument("--limit_samples_per_session", type=int, default=None)
     return parser.parse_args()
 
 
@@ -69,16 +57,6 @@ def split_head_backbone_parameters(model):
         target = head_params if any(part in name for part in head_keywords) else backbone_params
         target.append(param)
     return backbone_params, head_params
-
-
-def stratified_pose_split(total_poses, folds, fold):
-    if folds < 2:
-        raise ValueError("--pose_folds must be at least 2")
-    if fold < 0 or fold >= folds:
-        raise ValueError(f"--pose_fold must be in [0, {folds}), got {fold}")
-    val_indices = [index for index in range(total_poses) if index % folds == fold]
-    train_indices = [index for index in range(total_poses) if index % folds != fold]
-    return train_indices, val_indices
 
 
 class PKBatchSampler(Sampler):
@@ -207,44 +185,23 @@ def main():
         args.device = "cpu"
     device = torch.device(args.device)
 
-    train_subjects = load_subject_ids(args.train_split, args.limit_subjects)
-    val_subjects = load_subject_ids(args.val_split, args.limit_subjects)
-    shared_subjects = [sid for sid in val_subjects if sid in set(train_subjects)]
-    if not shared_subjects and not args.allow_disjoint_subjects:
-        raise ValueError(
-            "Closed-set identity validation requires train/val subject overlap. "
-            f"Got 0 shared subjects between {args.train_split} and {args.val_split}. "
-            "Use the default real_all.txt pose split, provide overlapping splits, or pass "
-            "--allow_disjoint_subjects only for non-closed-set diagnostics."
-        )
-
+    train_subjects = discover_subject_ids(args.data_root)
+    if args.limit_subjects is not None:
+        train_subjects = train_subjects[: args.limit_subjects]
     label_to_idx = {sid: i for i, sid in enumerate(train_subjects)}
-    train_pose_indices = None
-    val_pose_indices = None
-    if args.split_strategy == "stratified":
-        total_poses = np.load(DATA_PATH / MODES[args.mode], mmap_mode="r").shape[1]
-        train_pose_indices, val_pose_indices = stratified_pose_split(
-            total_poses, args.pose_folds, args.pose_fold
-        )
     train_dataset = IdentityDataset(
-        args.train_split,
-        mode=args.mode,
-        limit_poses=args.limit_poses if train_pose_indices is None else None,
+        data_root=args.data_root,
+        sessions=args.train_sessions,
         subject_ids=train_subjects,
         label_to_idx=label_to_idx,
-        pose_start=args.train_pose_start if train_pose_indices is None else None,
-        pose_end=args.train_pose_end if train_pose_indices is None else None,
-        pose_indices=train_pose_indices,
+        limit_samples_per_session=args.limit_samples_per_session,
     )
     val_dataset = IdentityDataset(
-        args.val_split,
-        mode=args.mode,
-        limit_poses=args.limit_poses if val_pose_indices is None else None,
-        subject_ids=shared_subjects if shared_subjects else val_subjects,
+        data_root=args.data_root,
+        sessions=args.val_sessions,
+        subject_ids=train_subjects,
         label_to_idx=label_to_idx,
-        pose_start=args.val_pose_start if val_pose_indices is None else None,
-        pose_end=args.val_pose_end if val_pose_indices is None else None,
-        pose_indices=val_pose_indices,
+        limit_samples_per_session=args.limit_samples_per_session,
     )
 
     if args.model == "pressure_arcface":
@@ -303,17 +260,14 @@ def main():
     metrics_path = out_dir / "metrics.jsonl"
 
     config = vars(args)
-    config["base_path"] = str(BASE_PATH)
+    config["data_root"] = str(args.data_root.resolve())
     config["train_subjects"] = train_dataset.subject_ids
     config["val_subjects"] = val_dataset.subject_ids
-    config["shared_subjects"] = shared_subjects
-    config["closed_set_identity"] = bool(shared_subjects)
+    config["closed_set_identity"] = True
     config["random_sample_acc"] = 1.0 / max(train_dataset.num_classes, 1)
     config["random_top5_acc"] = min(5, train_dataset.num_classes) / max(train_dataset.num_classes, 1)
     config["train_samples"] = len(train_dataset)
     config["val_samples"] = len(val_dataset)
-    config["train_pose_indices"] = train_pose_indices
-    config["val_pose_indices"] = val_pose_indices
     (out_dir / "config.json").write_text(json.dumps(config, indent=2, ensure_ascii=False))
 
     print(
@@ -324,11 +278,7 @@ def main():
         f"random top-1≈{config['random_sample_acc']:.4f}, "
         f"random top-5≈{config['random_top5_acc']:.4f}."
     )
-    if train_pose_indices is not None:
-        print(
-            f"Stratified pose split: train={train_pose_indices}, "
-            f"val={val_pose_indices}."
-        )
+    print(f"Session split: train={args.train_sessions}, val={args.val_sessions}.")
     if args.model == "convnextv2_base":
         print(
             "ConvNeXt V2 uses an ImageNet-pretrained backbone but a new randomly "
@@ -451,7 +401,7 @@ def main():
                         "margin": args.arcface_margin,
                     },
                     "num_classes": train_dataset.num_classes,
-                    "mode": args.mode,
+                    "mode": "pressure",
                     "label_to_idx": train_dataset.label_to_idx,
                     "idx_to_label": train_dataset.idx_to_label,
                     "val_metrics": val_metrics,
