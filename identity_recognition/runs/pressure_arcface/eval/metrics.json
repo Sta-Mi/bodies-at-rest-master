@@ -1,0 +1,11 @@
+{
+  "acc_sample": 1.0,
+  "acc_top5": 1.0,
+  "acc_subject": 1.0,
+  "subject_total": 20,
+  "checkpoint_epoch": 33,
+  "sessions": [
+    "prescribed"
+  ],
+  "includes_training_sessions": true
+}

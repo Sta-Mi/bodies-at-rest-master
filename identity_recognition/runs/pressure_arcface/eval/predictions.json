@@ -1,0 +1,122 @@
+{
+  "S103": {
+    "true_label_idx": 0,
+    "pred_label_idx": 0,
+    "pred_subject_id": "S103",
+    "correct": 1
+  },
+  "S104": {
+    "true_label_idx": 1,
+    "pred_label_idx": 1,
+    "pred_subject_id": "S104",
+    "correct": 1
+  },
+  "S107": {
+    "true_label_idx": 2,
+    "pred_label_idx": 2,
+    "pred_subject_id": "S107",
+    "correct": 1
+  },
+  "S114": {
+    "true_label_idx": 3,
+    "pred_label_idx": 3,
+    "pred_subject_id": "S114",
+    "correct": 1
+  },
+  "S118": {
+    "true_label_idx": 4,
+    "pred_label_idx": 4,
+    "pred_subject_id": "S118",
+    "correct": 1
+  },
+  "S121": {
+    "true_label_idx": 5,
+    "pred_label_idx": 5,
+    "pred_subject_id": "S121",
+    "correct": 1
+  },
+  "S130": {
+    "true_label_idx": 6,
+    "pred_label_idx": 6,
+    "pred_subject_id": "S130",
+    "correct": 1
+  },
+  "S134": {
+    "true_label_idx": 7,
+    "pred_label_idx": 7,
+    "pred_subject_id": "S134",
+    "correct": 1
+  },
+  "S140": {
+    "true_label_idx": 8,
+    "pred_label_idx": 8,
+    "pred_subject_id": "S140",
+    "correct": 1
+  },
+  "S141": {
+    "true_label_idx": 9,
+    "pred_label_idx": 9,
+    "pred_subject_id": "S141",
+    "correct": 1
+  },
+  "S145": {
+    "true_label_idx": 10,
+    "pred_label_idx": 10,
+    "pred_subject_id": "S145",
+    "correct": 1
+  },
+  "S151": {
+    "true_label_idx": 11,
+    "pred_label_idx": 11,
+    "pred_subject_id": "S151",
+    "correct": 1
+  },
+  "S163": {
+    "true_label_idx": 12,
+    "pred_label_idx": 12,
+    "pred_subject_id": "S163",
+    "correct": 1
+  },
+  "S165": {
+    "true_label_idx": 13,
+    "pred_label_idx": 13,
+    "pred_subject_id": "S165",
+    "correct": 1
+  },
+  "S170": {
+    "true_label_idx": 14,
+    "pred_label_idx": 14,
+    "pred_subject_id": "S170",
+    "correct": 1
+  },
+  "S179": {
+    "true_label_idx": 15,
+    "pred_label_idx": 15,
+    "pred_subject_id": "S179",
+    "correct": 1
+  },
+  "S184": {
+    "true_label_idx": 16,
+    "pred_label_idx": 16,
+    "pred_subject_id": "S184",
+    "correct": 1
+  },
+  "S187": {
+    "true_label_idx": 17,
+    "pred_label_idx": 17,
+    "pred_subject_id": "S187",
+    "correct": 1
+  },
+  "S188": {
+    "true_label_idx": 18,
+    "pred_label_idx": 18,
+    "pred_subject_id": "S188",
+    "correct": 1
+  },
+  "S196": {
+    "true_label_idx": 19,
+    "pred_label_idx": 19,
+    "pred_subject_id": "S196",
+    "correct": 1
+  }
+}

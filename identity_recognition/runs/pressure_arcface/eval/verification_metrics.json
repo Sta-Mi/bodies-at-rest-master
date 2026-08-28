@@ -1,0 +1,14 @@
+{
+  "num_positive_pairs": 196,
+  "num_negative_pairs": 4655,
+  "roc_auc": 0.8025570485981718,
+  "eer": 0.27545649838882924,
+  "eer_threshold": 0.14817065000534058,
+  "tar_at_far_0.1": 0.46938775510204084,
+  "tar_at_far_0.01": 0.061224489795918366,
+  "tar_at_far_0.001": 0.02040816326530612,
+  "num_embeddings": 99,
+  "sessions": [
+    "p_select"
+  ]
+}
